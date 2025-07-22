@@ -1,0 +1,41 @@
+# === Rust build artifacts ===
+/target
+**/*.rs.bk
+
+# === Trunk build artifacts ===
+/dist
+/pkg
+
+# === WASM build artifacts ===
+*.wasm
+*.wasm.d
+*.js
+*.js.map
+*.css
+
+# === Trunk cache ===
+.trunk/
+
+# === Node (if you ever use npm for assets) ===
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+
+# === Editor-specific ===
+*.swp
+*.swo
+*.swn
+*.swn
+*.sublime-project
+*.sublime-workspace
+.idea/
+.vscode/
+*.log
+
+# === Cargo specific ===
+/Cargo.lock
