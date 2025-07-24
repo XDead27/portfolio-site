@@ -12,6 +12,8 @@
 *.js
 *.js.map
 *.css
+!tailwind.config.js
+!input.css
 
 # === Trunk cache ===
 .trunk/
