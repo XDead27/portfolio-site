@@ -9,7 +9,7 @@ pub fn Navbar(
     let workspace_base_css_class = "inline-block align-middle rounded-sm hover:bg-green-200 transition-colors duration-300 px-2 cursor-pointer";
 
     view! {
-        <div class="flex flex-row space-x-2 justify-between px-4 py-2 fixed bottom-16 left-1/2 -translate-x-1/2 rounded-sm bg-green text-white">
+        <div class="flex flex-row space-x-2 justify-between px-4 py-2 mx-auto mb-12 rounded-sm bg-green text-white">
             {workspaces.iter().enumerate().map(|(idx, &workspace)| {
                 view! {
                     <span
