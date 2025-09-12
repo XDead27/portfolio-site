@@ -1,16 +1,48 @@
 use crate::components::Navbar;
-use crate::components::Window;
 use crate::components::Workspace;
+use crate::components::workspace::WorkspaceData;
 use leptos::prelude::*;
 use leptos_meta::*;
 use leptos_router::{
     StaticSegment,
     components::{Route, Router, Routes},
 };
+use reactive_stores::Store;
+use uuid::Uuid;
+
+#[derive(Clone, Debug, Store)]
+pub struct GlobalState {
+    current_workspace: usize,
+    workspaces: Vec<WorkspaceData>,
+}
+
+impl Default for GlobalState {
+    fn default() -> Self {
+        Self {
+            current_workspace: 0,
+            all_windows: vec![
+                WindowData::Bio {
+                    id: Uuid::new_v4(),
+                    workspace: 0,
+                },
+                WindowData::ThisSite {
+                    id: Uuid::new_v4(),
+                    workspace: 0,
+                },
+                WindowData::Skills {
+                    id: Uuid::new_v4(),
+                    workspace: 0,
+                },
+            ],
+            focused_window: None,
+        }
+    }
+}
 
 #[component]
 pub fn App() -> impl IntoView {
     provide_meta_context();
+    provide_context(Store::new(GlobalState::default()));
 
     view! {
         <Router>
@@ -23,10 +55,17 @@ pub fn App() -> impl IntoView {
 
 #[component]
 fn Home() -> impl IntoView {
-    let (workspace, set_workspace) = signal::<u32>(0);
-    let (windows, set_windows) = signal(Vec::<String>::new());
+    let current_workspace = expect_context::<Store<GlobalState>>().current_workspace();
+    let windows = expect_context::<Store<GlobalState>>().all_windows();
 
-    set_windows.set(vec!["About".into(), "Projects".into()]);
+    let ws_windows = Memo::new(move |_| {
+        windows
+            .get()
+            .iter()
+            .filter(|&w| w.workspace() == current_workspace.get())
+            .cloned()
+            .collect::<Vec<_>>()
+    });
 
     view! {
         <Title text="Home | Daniel Peter - Portofolio"/>
@@ -34,20 +73,15 @@ fn Home() -> impl IntoView {
             <div class="flex flex-col h-screen">
                 <div class="p-4 text-wm-cyan">"Welcome to my portfolio!"</div>
                 <Workspace>
-                    {move || windows.get().iter().enumerate().map(|(idx, window_name)| {
-                        view! {
-                            <Window
-                                name=window_name.clone()
-                                on_close=move || {
-                                    set_windows.update(|windows| {
-                                        windows.remove(idx);
-                                    });
-                                }
-                            />
-                        }
-                    }).collect::<Vec<_>>()}
+                    {move || {
+                        ws_windows
+                            .get()
+                            .into_iter()
+                            .map(|w| w.render())
+                            .collect_view()
+                    }}
                 </Workspace>
-                <Navbar current_workspace=workspace set_workspace=set_workspace/>
+                <Navbar/>
             </div>
         </main>
     }

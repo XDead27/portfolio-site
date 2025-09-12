@@ -1,49 +1,48 @@
-use crate::components::workspace::Workspace;
+use crate::components::Window;
 use leptos::prelude::*;
+use uuid::Uuid;
 
 #[component]
-fn Bio() -> impl IntoView {
+pub fn BioWindow(id: Uuid) -> impl IntoView {
     view! {
-        <div class="flex flex-col space-y-4">
-            <h2 class="text-2xl font-bold">"About Me"</h2>
-            <p>
-                "I am a software developer with a passion for building web applications. I enjoy working with modern technologies and frameworks to create efficient and user-friendly experiences."
-            </p>
-        </div>
+        <Window id=id name="Bio".to_string()>
+            <div class="flex flex-col space-y-4">
+                <h2 class="text-2xl font-bold">"About Me"</h2>
+                <p>
+                    "I am a software developer with a passion for building web applications. I enjoy working with modern technologies and frameworks to create efficient and user-friendly experiences."
+                </p>
+            </div>
+        </Window>
     }
 }
 
 #[component]
-fn ThisSite() -> impl IntoView {
+pub fn ThisSiteWindow(id: Uuid) -> impl IntoView {
     view! {
-        <div class="flex flex-col space-y-4">
-            <h2 class="text-2xl font-bold">"This Site"</h2>
-            <p>
-                "This site is built using Leptos, a Rust framework for building web applications. It showcases my projects and skills in a clean and modern design."
-            </p>
-        </div>
+        <Window id=id name="This Site".to_string()>
+            <div class="flex flex-col space-y-4">
+                <h2 class="text-2xl font-bold">"This Site"</h2>
+                <p>
+                    "This site is built using Leptos, a Rust framework for building web applications. It showcases my projects and skills in a clean and modern design."
+                </p>
+            </div>
+        </Window>
     }
 }
 
 #[component]
-fn Skills() -> impl IntoView {
+pub fn SkillsWindow(id: Uuid) -> impl IntoView {
     view! {
-        <div class="flex flex-col space-y-4">
-            <h2 class="text-2xl font-bold">"Skills"</h2>
-            <ul class="list-disc pl-5">
-                <li>"Rust"</li>
-                <li>"JavaScript"</li>
-                <li>"Web Development"</li>
-                <li>"UI/UX Design"</li>
-            </ul>
-        </div>
-    }
-}
-
-pub fn AboutWorkspace() -> impl IntoView {
-    view! {
-        <Workspace>
-            "Abcd"
-        </Workspace>
+        <Window id=id name="Skills".to_string()>
+            <div class="flex flex-col space-y-4">
+                <h2 class="text-2xl font-bold">"Skills"</h2>
+                <ul class="list-disc pl-5">
+                    <li>"Rust"</li>
+                    <li>"JavaScript"</li>
+                    <li>"Web Development"</li>
+                    <li>"UI/UX Design"</li>
+                </ul>
+            </div>
+        </Window>
     }
 }

@@ -1,0 +1,1582 @@
+error|:|src/components/navbar.rs|:|9|:|9|:|5|:|36|:|unresolved import `crate::components::modules::WindowData`|:|[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `crate::components::modules::WindowData`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/components/navbar.rs:9:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    components::modules::WindowData,[0m
+[0m  [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno `WindowData` in `components::modules`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: consider importing this struct instead:[0m
+[0m          crate::components::window::WindowData[0m
+
+|:|none
+error|:|src/components/navbar.rs|:|9|:|9|:|5|:|36|:|unresolved import `crate::components::modules::WindowData`|:|[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `crate::components::modules::WindowData`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/components/navbar.rs:9:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    components::modules::WindowData,[0m
+[0m  [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno `WindowData` in `components::modules`[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: consider importing this struct instead:[0m
+[0m          crate::components::window::WindowData[0m
+
+|:|none
+error|:|src/app.rs|:|24|:|24|:|17|:|27|:|failed to resolve: use of undeclared type `WindowData`|:|[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: use of undeclared type `WindowData`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:24:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                WindowData::Bio {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9muse of undeclared type `WindowData`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[38;5;10m+ use crate::components::window::WindowData;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+|:|none
+help|:|src/app.rs|:|1|:|1|:|1|:|1|:|consider importing this struct|:|none|:|use crate::components::window::WindowData;
+
+error|:|src/app.rs|:|28|:|28|:|17|:|27|:|failed to resolve: use of undeclared type `WindowData`|:|[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: use of undeclared type `WindowData`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:28:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m28[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                WindowData::ThisSite {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9muse of undeclared type `WindowData`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[38;5;10m+ use crate::components::window::WindowData;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+|:|none
+help|:|src/app.rs|:|1|:|1|:|1|:|1|:|consider importing this struct|:|none|:|use crate::components::window::WindowData;
+
+error|:|src/app.rs|:|24|:|24|:|17|:|27|:|failed to resolve: use of undeclared type `WindowData`|:|[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: use of undeclared type `WindowData`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:24:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                WindowData::Bio {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9muse of undeclared type `WindowData`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[38;5;10m+ use crate::components::window::WindowData;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+|:|none
+help|:|src/app.rs|:|1|:|1|:|1|:|1|:|consider importing this struct|:|none|:|use crate::components::window::WindowData;
+
+error|:|src/app.rs|:|32|:|32|:|17|:|27|:|failed to resolve: use of undeclared type `WindowData`|:|[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: use of undeclared type `WindowData`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:32:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                WindowData::Skills {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9muse of undeclared type `WindowData`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[38;5;10m+ use crate::components::window::WindowData;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+|:|none
+help|:|src/app.rs|:|1|:|1|:|1|:|1|:|consider importing this struct|:|none|:|use crate::components::window::WindowData;
+
+error|:|src/app.rs|:|28|:|28|:|17|:|27|:|failed to resolve: use of undeclared type `WindowData`|:|[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: use of undeclared type `WindowData`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:28:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m28[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                WindowData::ThisSite {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9muse of undeclared type `WindowData`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[38;5;10m+ use crate::components::window::WindowData;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+|:|none
+help|:|src/app.rs|:|1|:|1|:|1|:|1|:|consider importing this struct|:|none|:|use crate::components::window::WindowData;
+
+error|:|src/app.rs|:|32|:|32|:|17|:|27|:|failed to resolve: use of undeclared type `WindowData`|:|[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: use of undeclared type `WindowData`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:32:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                WindowData::Skills {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9muse of undeclared type `WindowData`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m1[0m[0m  [0m[0m[38;5;10m+ use crate::components::window::WindowData;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+|:|none
+help|:|src/app.rs|:|1|:|1|:|1|:|1|:|consider importing this struct|:|none|:|use crate::components::window::WindowData;
+
+error|:|src/app.rs|:|45|:|45|:|32|:|54|:|`std::ptr::NonNull<()>` cannot be shared between threads safely|:|[0m[1m[38;5;9merror[E0277][0m[0m[1m: `std::ptr::NonNull<()>` cannot be shared between threads safely[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:45:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    provide_context(Store::new(GlobalState::default()));[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12m----------[0m[0m [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9m`std::ptr::NonNull<()>` cannot be shared between threads safely[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12mrequired by a bound introduced by this call[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: within `app::GlobalState`, the trait `std::marker::Sync` is not implemented for `std::ptr::NonNull<()>`[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `erased::erased_box::ErasedBox`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/erased-0.1.2/src/erased_box.rs:21:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct ErasedBox {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::option::Option<erased::erased_box::ErasedBox>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:593:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m593[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub enum Option<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m          [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::tachys::erased::Erased`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/erased.rs:71:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0merased!([Send + 'static], Erased);[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                           [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::prelude::AnyView`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/view/any_view.rs:33:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct AnyView {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::window::WindowData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/window.rs:5:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WindowData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::workspace::WorkspaceNodeData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/workspace.rs:12:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WorkspaceNodeData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::node::Node<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/node.rs:19:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct Node<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::slab::SlabNode<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs:14:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mstruct SlabNode<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m        [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Entry<SlabNode<Node<WorkspaceNodeData>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs:262:6[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m262[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0menum Entry<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m      [0m[0m[1m[38;5;10m^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `PhantomData<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs:823:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m823[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct PhantomData<T: PointeeSized>;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `RawVec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:74:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct RawVec<T, A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Vec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:414:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m414[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Vec<T, #[unstable(feature = "allocator_api", issue = "32838")] A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Slab<SlabNode<Node<WorkspaceNodeData>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs:136:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m136[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Slab<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::slab::Slab<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs:26:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct Slab<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::core_tree::CoreTree<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/core_tree.rs:12:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct CoreTree<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::Tree<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/tree.rs:101:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Tree<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::workspace::WorkspaceData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/workspace.rs:17:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WorkspaceData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::marker::PhantomData<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs:823:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m823[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct PhantomData<T: PointeeSized>;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::wasm_bindgen::__rt::alloc::raw_vec::RawVec<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:74:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct RawVec<T, A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::vec::Vec<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:414:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m414[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Vec<T, #[unstable(feature = "allocator_api", issue = "32838")] A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `app::GlobalState`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:14:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct GlobalState {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `reactive_stores::Store::<T>::new`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:599:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m599[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    T: Send + Sync + 'static,[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m               [0m[0m[1m[38;5;10m^^^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `Store::<T>::new`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m602[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub fn new(value: T) -> Self {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;12m---[0m[0m [0m[0m[1m[38;5;12mrequired by a bound in this associated function[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the full name for the type has been written to '/opt/user/mrxdead/Documents/Projects/portfolio-site/target/debug/deps/portofolio_site-b162b0f0812b26ce.long-type-13396924855688139150.txt'[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: consider using `--verbose` to print the full type name to the console[0m
+
+|:|none
+error|:|src/app.rs|:|45|:|45|:|21|:|31|:|`std::ptr::NonNull<()>` cannot be shared between threads safely|:|[0m[1m[38;5;9merror[E0277][0m[0m[1m: `std::ptr::NonNull<()>` cannot be shared between threads safely[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:45:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    provide_context(Store::new(GlobalState::default()));[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12m----------[0m[0m [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9m`std::ptr::NonNull<()>` cannot be shared between threads safely[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12mrequired by a bound introduced by this call[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: within `app::GlobalState`, the trait `std::marker::Sync` is not implemented for `std::ptr::NonNull<()>`[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `erased::erased_box::ErasedBox`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/erased-0.1.2/src/erased_box.rs:21:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct ErasedBox {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::option::Option<erased::erased_box::ErasedBox>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:593:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m593[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub enum Option<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m          [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::tachys::erased::Erased`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/erased.rs:71:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0merased!([Send + 'static], Erased);[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                           [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::prelude::AnyView`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/view/any_view.rs:33:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct AnyView {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::window::WindowData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/window.rs:5:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WindowData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::workspace::WorkspaceNodeData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/workspace.rs:12:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WorkspaceNodeData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::node::Node<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/node.rs:19:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct Node<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::slab::SlabNode<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs:14:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mstruct SlabNode<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m        [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Entry<SlabNode<Node<WorkspaceNodeData>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs:262:6[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m262[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0menum Entry<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m      [0m[0m[1m[38;5;10m^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `PhantomData<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs:823:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m823[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct PhantomData<T: PointeeSized>;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `RawVec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:74:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct RawVec<T, A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Vec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:414:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m414[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Vec<T, #[unstable(feature = "allocator_api", issue = "32838")] A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Slab<SlabNode<Node<WorkspaceNodeData>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs:136:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m136[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Slab<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::slab::Slab<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs:26:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct Slab<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::core_tree::CoreTree<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/core_tree.rs:12:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct CoreTree<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::Tree<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/tree.rs:101:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Tree<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::workspace::WorkspaceData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/workspace.rs:17:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WorkspaceData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::marker::PhantomData<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs:823:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m823[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct PhantomData<T: PointeeSized>;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::wasm_bindgen::__rt::alloc::raw_vec::RawVec<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:74:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct RawVec<T, A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::vec::Vec<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:414:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m414[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Vec<T, #[unstable(feature = "allocator_api", issue = "32838")] A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `app::GlobalState`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:14:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct GlobalState {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `reactive_stores::Store::<T>::new`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:599:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m599[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    T: Send + Sync + 'static,[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m               [0m[0m[1m[38;5;10m^^^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `Store::<T>::new`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m602[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub fn new(value: T) -> Self {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;12m---[0m[0m [0m[0m[1m[38;5;12mrequired by a bound in this associated function[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the full name for the type has been written to '/opt/user/mrxdead/Documents/Projects/portfolio-site/target/debug/deps/portofolio_site-b162b0f0812b26ce.long-type-13396924855688139150.txt'[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: consider using `--verbose` to print the full type name to the console[0m
+
+|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/erased-0.1.2/src/erased_box.rs|:|21|:|21|:|12|:|21|:|required because it appears within the type `erased::erased_box::ErasedBox`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs|:|593|:|593|:|10|:|16|:|required because it appears within the type `std::option::Option<erased::erased_box::ErasedBox>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/erased.rs|:|71|:|71|:|27|:|33|:|required because it appears within the type `leptos::tachys::erased::Erased`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/view/any_view.rs|:|33|:|33|:|12|:|19|:|required because it appears within the type `leptos::prelude::AnyView`|:|none|:|none
+note|:|src/components/window.rs|:|5|:|5|:|12|:|22|:|required because it appears within the type `components::window::WindowData`|:|none|:|none
+note|:|src/components/workspace.rs|:|12|:|12|:|12|:|29|:|required because it appears within the type `components::workspace::WorkspaceNodeData`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/node.rs|:|19|:|19|:|19|:|23|:|required because it appears within the type `nary_tree::node::Node<components::workspace::WorkspaceNodeData>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs|:|14|:|14|:|8|:|16|:|required because it appears within the type `nary_tree::slab::SlabNode<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs|:|262|:|262|:|6|:|11|:|required because it appears within the type `Entry<SlabNode<Node<WorkspaceNodeData>>>`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs|:|823|:|823|:|12|:|23|:|required because it appears within the type `PhantomData<Entry<SlabNode<Node<WorkspaceNodeData>>>>`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs|:|74|:|74|:|19|:|25|:|required because it appears within the type `RawVec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs|:|414|:|414|:|12|:|15|:|required because it appears within the type `Vec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs|:|136|:|136|:|12|:|16|:|required because it appears within the type `Slab<SlabNode<Node<WorkspaceNodeData>>>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs|:|26|:|26|:|19|:|23|:|required because it appears within the type `nary_tree::slab::Slab<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/core_tree.rs|:|12|:|12|:|19|:|27|:|required because it appears within the type `nary_tree::core_tree::CoreTree<components::workspace::WorkspaceNodeData>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/tree.rs|:|101|:|101|:|12|:|16|:|required because it appears within the type `nary_tree::Tree<components::workspace::WorkspaceNodeData>`|:|none|:|none
+note|:|src/components/workspace.rs|:|17|:|17|:|12|:|25|:|required because it appears within the type `components::workspace::WorkspaceData`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs|:|823|:|823|:|12|:|23|:|required because it appears within the type `std::marker::PhantomData<components::workspace::WorkspaceData>`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs|:|74|:|74|:|19|:|25|:|required because it appears within the type `leptos::wasm_bindgen::__rt::alloc::raw_vec::RawVec<components::workspace::WorkspaceData>`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs|:|414|:|414|:|12|:|15|:|required because it appears within the type `std::vec::Vec<components::workspace::WorkspaceData>`|:|none|:|none
+note|:|src/app.rs|:|14|:|14|:|12|:|23|:|required because it appears within the type `app::GlobalState`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs|:|602|:|602|:|12|:|15|:|required by a bound in `reactive_stores::Store::<T>::new`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs|:|599|:|599|:|15|:|19|:|required by a bound in `reactive_stores::Store::<T>::new`|:|none|:|none
+error|:|src/app.rs|:|45|:|45|:|32|:|54|:|`std::ptr::NonNull<()>` cannot be shared between threads safely|:|[0m[1m[38;5;9merror[E0277][0m[0m[1m: `std::ptr::NonNull<()>` cannot be shared between threads safely[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:45:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    provide_context(Store::new(GlobalState::default()));[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12m----------[0m[0m [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9m`std::ptr::NonNull<()>` cannot be shared between threads safely[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12mrequired by a bound introduced by this call[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: within `app::GlobalState`, the trait `std::marker::Sync` is not implemented for `std::ptr::NonNull<()>`[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `erased::erased_box::ErasedBox`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/erased-0.1.2/src/erased_box.rs:21:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct ErasedBox {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::option::Option<erased::erased_box::ErasedBox>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:593:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m593[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub enum Option<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m          [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::tachys::erased::Erased`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/erased.rs:71:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0merased!([Send + 'static], Erased);[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                           [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::prelude::AnyView`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/view/any_view.rs:33:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct AnyView {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::window::WindowData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/window.rs:5:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WindowData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::workspace::WorkspaceNodeData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/workspace.rs:12:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WorkspaceNodeData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::node::Node<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/node.rs:19:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct Node<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::slab::SlabNode<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs:14:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mstruct SlabNode<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m        [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Entry<SlabNode<Node<WorkspaceNodeData>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs:262:6[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m262[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0menum Entry<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m      [0m[0m[1m[38;5;10m^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `PhantomData<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs:823:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m823[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct PhantomData<T: PointeeSized>;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `RawVec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:74:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct RawVec<T, A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Vec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:414:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m414[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Vec<T, #[unstable(feature = "allocator_api", issue = "32838")] A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Slab<SlabNode<Node<WorkspaceNodeData>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs:136:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m136[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Slab<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::slab::Slab<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs:26:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct Slab<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::core_tree::CoreTree<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/core_tree.rs:12:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct CoreTree<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::Tree<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/tree.rs:101:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Tree<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::workspace::WorkspaceData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/workspace.rs:17:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WorkspaceData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::marker::PhantomData<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs:823:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m823[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct PhantomData<T: PointeeSized>;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::wasm_bindgen::__rt::alloc::raw_vec::RawVec<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:74:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct RawVec<T, A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::vec::Vec<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:414:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m414[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Vec<T, #[unstable(feature = "allocator_api", issue = "32838")] A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `app::GlobalState`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:14:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct GlobalState {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `reactive_stores::Store::<T>::new`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:599:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m599[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    T: Send + Sync + 'static,[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m               [0m[0m[1m[38;5;10m^^^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `Store::<T>::new`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m602[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub fn new(value: T) -> Self {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;12m---[0m[0m [0m[0m[1m[38;5;12mrequired by a bound in this associated function[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the full name for the type has been written to '/opt/user/mrxdead/Documents/Projects/portfolio-site/target/debug/deps/portofolio_site-5c9d2d479ceb1461.long-type-16824487947526117671.txt'[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: consider using `--verbose` to print the full type name to the console[0m
+
+|:|none
+error|:|src/app.rs|:|45|:|45|:|21|:|31|:|`std::ptr::NonNull<()>` cannot be shared between threads safely|:|[0m[1m[38;5;9merror[E0277][0m[0m[1m: `std::ptr::NonNull<()>` cannot be shared between threads safely[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:45:32[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    provide_context(Store::new(GlobalState::default()));[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12m----------[0m[0m [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9m`std::ptr::NonNull<()>` cannot be shared between threads safely[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                     [0m[0m[1m[38;5;12mrequired by a bound introduced by this call[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: within `app::GlobalState`, the trait `std::marker::Sync` is not implemented for `std::ptr::NonNull<()>`[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `erased::erased_box::ErasedBox`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/erased-0.1.2/src/erased_box.rs:21:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct ErasedBox {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::option::Option<erased::erased_box::ErasedBox>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:593:10[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m593[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub enum Option<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m          [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::tachys::erased::Erased`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/erased.rs:71:27[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0merased!([Send + 'static], Erased);[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                           [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::prelude::AnyView`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/view/any_view.rs:33:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct AnyView {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::window::WindowData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/window.rs:5:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WindowData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::workspace::WorkspaceNodeData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/workspace.rs:12:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WorkspaceNodeData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::node::Node<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/node.rs:19:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct Node<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::slab::SlabNode<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs:14:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mstruct SlabNode<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m        [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Entry<SlabNode<Node<WorkspaceNodeData>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs:262:6[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m262[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0menum Entry<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m      [0m[0m[1m[38;5;10m^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `PhantomData<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs:823:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m823[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct PhantomData<T: PointeeSized>;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `RawVec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:74:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct RawVec<T, A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Vec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:414:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m414[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Vec<T, #[unstable(feature = "allocator_api", issue = "32838")] A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `Slab<SlabNode<Node<WorkspaceNodeData>>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs:136:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m136[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Slab<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::slab::Slab<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs:26:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct Slab<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::core_tree::CoreTree<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/core_tree.rs:12:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct CoreTree<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `nary_tree::Tree<components::workspace::WorkspaceNodeData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/tree.rs:101:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Tree<T> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `components::workspace::WorkspaceData`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/workspace.rs:17:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct WorkspaceData {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::marker::PhantomData<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs:823:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m823[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct PhantomData<T: PointeeSized>;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `leptos::wasm_bindgen::__rt::alloc::raw_vec::RawVec<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:74:19[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub(crate) struct RawVec<T, A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                   [0m[0m[1m[38;5;10m^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `std::vec::Vec<components::workspace::WorkspaceData>`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:414:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m414[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Vec<T, #[unstable(feature = "allocator_api", issue = "32838")] A: Allocator = Global> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required because it appears within the type `app::GlobalState`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:14:12[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct GlobalState {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;10m^^^^^^^^^^^[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `reactive_stores::Store::<T>::new`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:599:15[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m599[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    T: Send + Sync + 'static,[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m               [0m[0m[1m[38;5;10m^^^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `Store::<T>::new`[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m602[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub fn new(value: T) -> Self {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m            [0m[0m[1m[38;5;12m---[0m[0m [0m[0m[1m[38;5;12mrequired by a bound in this associated function[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the full name for the type has been written to '/opt/user/mrxdead/Documents/Projects/portfolio-site/target/debug/deps/portofolio_site-5c9d2d479ceb1461.long-type-16824487947526117671.txt'[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: consider using `--verbose` to print the full type name to the console[0m
+
+|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/erased-0.1.2/src/erased_box.rs|:|21|:|21|:|12|:|21|:|required because it appears within the type `erased::erased_box::ErasedBox`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs|:|593|:|593|:|10|:|16|:|required because it appears within the type `std::option::Option<erased::erased_box::ErasedBox>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/erased.rs|:|71|:|71|:|27|:|33|:|required because it appears within the type `leptos::tachys::erased::Erased`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tachys-0.2.6/src/view/any_view.rs|:|33|:|33|:|12|:|19|:|required because it appears within the type `leptos::prelude::AnyView`|:|none|:|none
+note|:|src/components/window.rs|:|5|:|5|:|12|:|22|:|required because it appears within the type `components::window::WindowData`|:|none|:|none
+note|:|src/components/workspace.rs|:|12|:|12|:|12|:|29|:|required because it appears within the type `components::workspace::WorkspaceNodeData`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/node.rs|:|19|:|19|:|19|:|23|:|required because it appears within the type `nary_tree::node::Node<components::workspace::WorkspaceNodeData>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs|:|14|:|14|:|8|:|16|:|required because it appears within the type `nary_tree::slab::SlabNode<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs|:|262|:|262|:|6|:|11|:|required because it appears within the type `Entry<SlabNode<Node<WorkspaceNodeData>>>`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs|:|823|:|823|:|12|:|23|:|required because it appears within the type `PhantomData<Entry<SlabNode<Node<WorkspaceNodeData>>>>`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs|:|74|:|74|:|19|:|25|:|required because it appears within the type `RawVec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs|:|414|:|414|:|12|:|15|:|required because it appears within the type `Vec<Entry<SlabNode<Node<WorkspaceNodeData>>>>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/slab-0.4.10/src/lib.rs|:|136|:|136|:|12|:|16|:|required because it appears within the type `Slab<SlabNode<Node<WorkspaceNodeData>>>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/slab.rs|:|26|:|26|:|19|:|23|:|required because it appears within the type `nary_tree::slab::Slab<nary_tree::node::Node<components::workspace::WorkspaceNodeData>>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/core_tree.rs|:|12|:|12|:|19|:|27|:|required because it appears within the type `nary_tree::core_tree::CoreTree<components::workspace::WorkspaceNodeData>`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nary_tree-0.4.4/src/tree.rs|:|101|:|101|:|12|:|16|:|required because it appears within the type `nary_tree::Tree<components::workspace::WorkspaceNodeData>`|:|none|:|none
+note|:|src/components/workspace.rs|:|17|:|17|:|12|:|25|:|required because it appears within the type `components::workspace::WorkspaceData`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/marker.rs|:|823|:|823|:|12|:|23|:|required because it appears within the type `std::marker::PhantomData<components::workspace::WorkspaceData>`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs|:|74|:|74|:|19|:|25|:|required because it appears within the type `leptos::wasm_bindgen::__rt::alloc::raw_vec::RawVec<components::workspace::WorkspaceData>`|:|none|:|none
+note|:|/home/mrxdead/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs|:|414|:|414|:|12|:|15|:|required because it appears within the type `std::vec::Vec<components::workspace::WorkspaceData>`|:|none|:|none
+note|:|src/app.rs|:|14|:|14|:|12|:|23|:|required because it appears within the type `app::GlobalState`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs|:|602|:|602|:|12|:|15|:|required by a bound in `reactive_stores::Store::<T>::new`|:|none|:|none
+note|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs|:|599|:|599|:|15|:|19|:|required by a bound in `reactive_stores::Store::<T>::new`|:|none|:|none
+error|:|src/app.rs|:|58|:|58|:|68|:|85|:|the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:58:68[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let current_workspace = expect_context::<Store<GlobalState>>().current_workspace();[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                                                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod cannot be called on `reactive_stores::Store<app::GlobalState>` due to unsatisfied trait bounds[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:591:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m591[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Store<T, S = SyncStorage> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m------------------------------------[0m[0m [0m[0m[1m[38;5;12mdoesn't satisfy `<_ as StoreField>::Value = GlobalState`, `_: GlobalStateStoreFields<Store<GlobalState>>` or `_: StoreField`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the following trait bounds were not satisfied:[0m
+[0m      `&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m[0m [0m[0m[1m[38;5;10munsatisfied trait bound introduced in this `derive` macro[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m[1m[38;5;10mnote[0m[0m: `app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Store` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+error|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs|:|591|:|591|:|1|:|37|:|the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:58:68[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let current_workspace = expect_context::<Store<GlobalState>>().current_workspace();[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                                                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod cannot be called on `reactive_stores::Store<app::GlobalState>` due to unsatisfied trait bounds[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:591:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m591[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Store<T, S = SyncStorage> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m------------------------------------[0m[0m [0m[0m[1m[38;5;12mdoesn't satisfy `<_ as StoreField>::Value = GlobalState`, `_: GlobalStateStoreFields<Store<GlobalState>>` or `_: StoreField`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the following trait bounds were not satisfied:[0m
+[0m      `&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m[0m [0m[0m[1m[38;5;10munsatisfied trait bound introduced in this `derive` macro[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m[1m[38;5;10mnote[0m[0m: `app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Store` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+note|:|src/app.rs|:|13|:|13|:|24|:|29|:|the following trait bounds were not satisfied:
+`&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`
+`&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`
+`<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`|:|none|:|none
+note|:|src/app.rs|:|13|:|13|:|24|:|29|:|`app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it|:|none|:|none
+error|:|src/app.rs|:|58|:|58|:|68|:|85|:|the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:58:68[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let current_workspace = expect_context::<Store<GlobalState>>().current_workspace();[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                                                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod cannot be called on `reactive_stores::Store<app::GlobalState>` due to unsatisfied trait bounds[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:591:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m591[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Store<T, S = SyncStorage> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m------------------------------------[0m[0m [0m[0m[1m[38;5;12mdoesn't satisfy `<_ as StoreField>::Value = GlobalState`, `_: GlobalStateStoreFields<Store<GlobalState>>` or `_: StoreField`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the following trait bounds were not satisfied:[0m
+[0m      `&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m[0m [0m[0m[1m[38;5;10munsatisfied trait bound introduced in this `derive` macro[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m[1m[38;5;10mnote[0m[0m: `app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Store` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+error|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs|:|591|:|591|:|1|:|37|:|the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:58:68[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let current_workspace = expect_context::<Store<GlobalState>>().current_workspace();[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                                                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod cannot be called on `reactive_stores::Store<app::GlobalState>` due to unsatisfied trait bounds[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:591:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m591[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Store<T, S = SyncStorage> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m------------------------------------[0m[0m [0m[0m[1m[38;5;12mdoesn't satisfy `<_ as StoreField>::Value = GlobalState`, `_: GlobalStateStoreFields<Store<GlobalState>>` or `_: StoreField`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the following trait bounds were not satisfied:[0m
+[0m      `&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m[0m [0m[0m[1m[38;5;10munsatisfied trait bound introduced in this `derive` macro[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m[1m[38;5;10mnote[0m[0m: `app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Store` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+note|:|src/app.rs|:|13|:|13|:|24|:|29|:|the following trait bounds were not satisfied:
+`&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`
+`&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`
+`<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`|:|none|:|none
+note|:|src/app.rs|:|13|:|13|:|24|:|29|:|`app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it|:|none|:|none
+error|:|src/app.rs|:|59|:|59|:|58|:|69|:|no method named `all_windows` found for struct `reactive_stores::Store` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `all_windows` found for struct `reactive_stores::Store` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:59:58[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let windows = expect_context::<Store<GlobalState>>().all_windows();[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                                                          [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `reactive_stores::Store<app::GlobalState>`[0m
+
+|:|none
+error|:|src/app.rs|:|59|:|59|:|58|:|69|:|no method named `all_windows` found for struct `reactive_stores::Store` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `all_windows` found for struct `reactive_stores::Store` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:59:58[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m59[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let windows = expect_context::<Store<GlobalState>>().all_windows();[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                                                          [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `reactive_stores::Store<app::GlobalState>`[0m
+
+|:|none
+error|:|src/app.rs|:|70|:|87|:|5|:|6|:|no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:70:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m    view! {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m _____^[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <Title text="Home | Daniel Peter - Portofolio"/>[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <main>[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            <div class="flex flex-col h-screen">[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        </main>[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m    }[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|_____^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::workspace::WorkspacePropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/workspace.rs:50:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `children` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `view` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+error|:|src/app.rs|:|70|:|87|:|5|:|6|:|no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:70:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m    view! {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m _____^[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <Title text="Home | Daniel Peter - Portofolio"/>[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <main>[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            <div class="flex flex-col h-screen">[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        </main>[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m    }[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|_____^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::workspace::WorkspacePropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/workspace.rs:50:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `children` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `view` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+error|:|src/components/workspace.rs|:|50|:|50|:|1|:|13|:|no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:70:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m    view! {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m _____^[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <Title text="Home | Daniel Peter - Portofolio"/>[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <main>[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            <div class="flex flex-col h-screen">[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        </main>[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m    }[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|_____^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::workspace::WorkspacePropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/workspace.rs:50:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `children` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `view` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+error|:|src/app.rs|:|70|:|87|:|5|:|6|:|no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:70:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m    view! {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m _____^[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <Title text="Home | Daniel Peter - Portofolio"/>[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <main>[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            <div class="flex flex-col h-screen">[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        </main>[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m    }[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|_____^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::workspace::WorkspacePropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/workspace.rs:50:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `children` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `view` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+error|:|src/app.rs|:|70|:|87|:|5|:|6|:|no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:70:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m    view! {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m _____^[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <Title text="Home | Daniel Peter - Portofolio"/>[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <main>[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            <div class="flex flex-col h-screen">[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        </main>[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m    }[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|_____^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::workspace::WorkspacePropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/workspace.rs:50:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `children` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `view` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+error|:|src/components/workspace.rs|:|50|:|50|:|1|:|13|:|no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `children` found for struct `components::workspace::WorkspacePropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:70:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m    view! {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m _____^[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <Title text="Home | Daniel Peter - Portofolio"/>[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        <main>[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m            <div class="flex flex-col h-screen">[0m
+[0m[1m[38;5;12m...[0m[0m  [0m[0m[1m[38;5;9m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m        </main>[0m
+[0m[1m[38;5;12m87[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|[0m[0m [0m[0m    }[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;9m|_____^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::workspace::WorkspacePropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/workspace.rs:50:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `children` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the macro `view` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|7|:|16|:|5|:|6|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:8:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m8[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Bio".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|8|:|8|:|17|:|19|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:8:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m8[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Bio".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/window.rs|:|12|:|12|:|1|:|13|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:8:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m8[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Bio".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|7|:|16|:|5|:|6|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:8:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m8[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Bio".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|8|:|8|:|17|:|19|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:8:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m8[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Bio".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/window.rs|:|12|:|12|:|1|:|13|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:8:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m8[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Bio".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|21|:|30|:|5|:|6|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:22:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="This Site".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|22|:|22|:|17|:|19|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:22:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="This Site".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/window.rs|:|12|:|12|:|1|:|13|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:22:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="This Site".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|21|:|30|:|5|:|6|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:22:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="This Site".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|22|:|22|:|17|:|19|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:22:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="This Site".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/window.rs|:|12|:|12|:|1|:|13|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:22:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="This Site".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|35|:|47|:|5|:|6|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:36:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Skills".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|36|:|36|:|17|:|19|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:36:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Skills".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/window.rs|:|12|:|12|:|1|:|13|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:36:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Skills".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|35|:|47|:|5|:|6|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:36:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Skills".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/modules/about.rs|:|36|:|36|:|17|:|19|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:36:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Skills".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/window.rs|:|12|:|12|:|1|:|13|:|no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `id` found for struct `components::window::WindowPropsBuilder` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/modules/about.rs:36:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m/[0m[0m [0m[0m    view! {[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        <Window id=id name="Skills".to_string()>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|[0m[0m                [0m[0m[1m[38;5;12m-[0m[0m[1m[38;5;9m^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `components::window::WindowPropsBuilder`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m|________________|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m::: [0m[0msrc/components/window.rs:12:1[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m#[component][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m   [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mmethod `id` not found for this struct[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `id`, perhaps you need to implement it:[0m
+[0m           candidate #1: `leptos::prelude::GlobalAttributes`[0m
+
+|:|none
+error|:|src/components/navbar.rs|:|63|:|63|:|68|:|85|:|the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/navbar.rs:63:68[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let current_workspace = expect_context::<Store<GlobalState>>().current_workspace();[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                                                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod cannot be called on `reactive_stores::Store<app::GlobalState>` due to unsatisfied trait bounds[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:591:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m591[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Store<T, S = SyncStorage> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m------------------------------------[0m[0m [0m[0m[1m[38;5;12mdoesn't satisfy `<_ as StoreField>::Value = GlobalState`, `_: GlobalStateStoreFields<Store<GlobalState>>` or `_: StoreField`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the following trait bounds were not satisfied:[0m
+[0m      `&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m[0m [0m[0m[1m[38;5;10munsatisfied trait bound introduced in this `derive` macro[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m[1m[38;5;10mnote[0m[0m: `app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Store` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+error|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs|:|591|:|591|:|1|:|37|:|the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/navbar.rs:63:68[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let current_workspace = expect_context::<Store<GlobalState>>().current_workspace();[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                                                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod cannot be called on `reactive_stores::Store<app::GlobalState>` due to unsatisfied trait bounds[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:591:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m591[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Store<T, S = SyncStorage> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m------------------------------------[0m[0m [0m[0m[1m[38;5;12mdoesn't satisfy `<_ as StoreField>::Value = GlobalState`, `_: GlobalStateStoreFields<Store<GlobalState>>` or `_: StoreField`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the following trait bounds were not satisfied:[0m
+[0m      `&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m[0m [0m[0m[1m[38;5;10munsatisfied trait bound introduced in this `derive` macro[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m[1m[38;5;10mnote[0m[0m: `app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Store` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+note|:|src/app.rs|:|13|:|13|:|24|:|29|:|the following trait bounds were not satisfied:
+`&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`
+`&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`
+`<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`|:|none|:|none
+note|:|src/app.rs|:|13|:|13|:|24|:|29|:|`app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it|:|none|:|none
+error|:|src/components/navbar.rs|:|63|:|63|:|68|:|85|:|the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/navbar.rs:63:68[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let current_workspace = expect_context::<Store<GlobalState>>().current_workspace();[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                                                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod cannot be called on `reactive_stores::Store<app::GlobalState>` due to unsatisfied trait bounds[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:591:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m591[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Store<T, S = SyncStorage> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m------------------------------------[0m[0m [0m[0m[1m[38;5;12mdoesn't satisfy `<_ as StoreField>::Value = GlobalState`, `_: GlobalStateStoreFields<Store<GlobalState>>` or `_: StoreField`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the following trait bounds were not satisfied:[0m
+[0m      `&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m[0m [0m[0m[1m[38;5;10munsatisfied trait bound introduced in this `derive` macro[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m[1m[38;5;10mnote[0m[0m: `app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Store` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+error|:|/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs|:|591|:|591|:|1|:|37|:|the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: the method `current_workspace` exists for struct `reactive_stores::Store<app::GlobalState>`, but its trait bounds were not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/components/navbar.rs:63:68[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let current_workspace = expect_context::<Store<GlobalState>>().current_workspace();[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                                                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod cannot be called on `reactive_stores::Store<app::GlobalState>` due to unsatisfied trait bounds[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/home/mrxdead/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reactive_stores-0.2.5/src/lib.rs:591:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m591[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct Store<T, S = SyncStorage> {[0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m [0m[0m[1m[38;5;12m------------------------------------[0m[0m [0m[0m[1m[38;5;12mdoesn't satisfy `<_ as StoreField>::Value = GlobalState`, `_: GlobalStateStoreFields<Store<GlobalState>>` or `_: StoreField`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: the following trait bounds were not satisfied:[0m
+[0m      `&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m      `<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`[0m
+[0m      `reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m[0m [0m[0m[1m[38;5;10munsatisfied trait bound introduced in this `derive` macro[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m[1m[38;5;10mnote[0m[0m: `app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:13:24[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m    [0m[0m[1m[38;5;12m|[0m[0m                        [0m[0m[1m[38;5;10m^^^^^[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Store` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+|:|none
+note|:|src/app.rs|:|13|:|13|:|24|:|29|:|the following trait bounds were not satisfied:
+`&mut reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`
+`&reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`
+`<&mut reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`<&reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`<reactive_stores::Store<app::GlobalState> as reactive_stores::StoreField>::Value = app::GlobalState`
+`reactive_stores::Store<app::GlobalState>: reactive_stores::StoreField`|:|none|:|none
+note|:|src/app.rs|:|13|:|13|:|24|:|29|:|`app::GlobalStateStoreFields` defines an item `current_workspace`, perhaps you need to implement it|:|none|:|none
+error|:|src/components/navbar.rs|:|64|:|64|:|66|:|77|:|no method named `all_windows` found for struct `reactive_stores::Store` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `all_windows` found for struct `reactive_stores::Store` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/navbar.rs:64:66[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m64[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let current_windows = expect_context::<Store<GlobalState>>().all_windows();[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                                                                  [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `reactive_stores::Store<app::GlobalState>`[0m
+
+|:|none
+error|:|src/components/navbar.rs|:|64|:|64|:|66|:|77|:|no method named `all_windows` found for struct `reactive_stores::Store` in the current scope|:|[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `all_windows` found for struct `reactive_stores::Store` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/navbar.rs:64:66[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m64[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let current_windows = expect_context::<Store<GlobalState>>().all_windows();[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                                                                  [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `reactive_stores::Store<app::GlobalState>`[0m
+
+|:|none
+warning|:|src/components/window.rs|:|14|:|14|:|22|:|36|:|unused variable: `set_is_closing`|:|[0m[1m[33mwarning[0m[0m[1m: unused variable: `set_is_closing`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/window.rs:14:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let (is_closing, set_is_closing) = signal(false);[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_set_is_closing`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_variables)]` on by default[0m
+
+|:|none
+help|:|src/components/window.rs|:|14|:|14|:|22|:|36|:|if this is intentional, prefix it with an underscore|:|none|:|_set_is_closing
+warning|:|src/components/window.rs|:|14|:|14|:|22|:|36|:|unused variable: `set_is_closing`|:|[0m[1m[33mwarning[0m[0m[1m: unused variable: `set_is_closing`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/window.rs:14:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    let (is_closing, set_is_closing) = signal(false);[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                      [0m[0m[1m[33m^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[33mhelp: if this is intentional, prefix it with an underscore: `_set_is_closing`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_variables)]` on by default[0m
+
+|:|none
+help|:|src/components/window.rs|:|14|:|14|:|22|:|36|:|if this is intentional, prefix it with an underscore|:|none|:|_set_is_closing
+error|:|src/components/workspace.rs|:|33|:|33|:|30|:|46|:|cannot move out of a shared reference|:|[0m[1m[38;5;9merror[E0507][0m[0m[1m: cannot move out of a shared reference[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/workspace.rs:33:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                <Window data=node.data().data on_close=||{}/>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                              [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmove occurs because value has type `components::window::WindowData`, which does not implement the `Copy` trait[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider cloning the value if the performance cost is acceptable[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                <Window data=node.data().data[0m[0m[38;5;10m.clone()[0m[0m on_close=||{}/>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                                              [0m[0m[38;5;10m++++++++[0m
+
+|:|none
+help|:|src/components/workspace.rs|:|33|:|33|:|46|:|46|:|consider cloning the value if the performance cost is acceptable|:|none|:|.clone()
+error|:|src/app.rs|:|13|:|13|:|10|:|15|:|the trait bound `components::workspace::WorkspaceData: std::clone::Clone` is not satisfied|:|[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `components::workspace::WorkspaceData: std::clone::Clone` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:16:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m          [0m[0m[1m[38;5;12m-----[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    workspaces: Vec<WorkspaceData>,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `std::clone::Clone` is not implemented for `components::workspace::WorkspaceData`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: required for `std::vec::Vec<components::workspace::WorkspaceData>` to implement `std::clone::Clone`[0m
+
+|:|none
+error|:|src/app.rs|:|13|:|13|:|17|:|22|:|`components::workspace::WorkspaceData` doesn't implement `std::fmt::Debug`|:|[0m[1m[38;5;9merror[E0277][0m[0m[1m: `components::workspace::WorkspaceData` doesn't implement `std::fmt::Debug`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:16:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                 [0m[0m[1m[38;5;12m-----[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    workspaces: Vec<WorkspaceData>,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `std::fmt::Debug` is not implemented for `components::workspace::WorkspaceData`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: add `#[derive(Debug)]` to `components::workspace::WorkspaceData` or manually `impl std::fmt::Debug for components::workspace::WorkspaceData`[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `std::fmt::Debug` [0m[0m[1m[35mis[0m[0m implemented for `[0m[0m[1m[35mstd::vec::Vec<T, A>[0m[0m`[0m
+
+|:|none
+error|:|src/components/workspace.rs|:|33|:|33|:|30|:|46|:|cannot move out of a shared reference|:|[0m[1m[38;5;9merror[E0507][0m[0m[1m: cannot move out of a shared reference[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/components/workspace.rs:33:30[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                <Window data=node.data().data on_close=||{}/>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                              [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mmove occurs because value has type `components::window::WindowData`, which does not implement the `Copy` trait[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider cloning the value if the performance cost is acceptable[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m| [0m[0m                <Window data=node.data().data[0m[0m[38;5;10m.clone()[0m[0m on_close=||{}/>[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                                              [0m[0m[38;5;10m++++++++[0m
+
+|:|none
+help|:|src/components/workspace.rs|:|33|:|33|:|46|:|46|:|consider cloning the value if the performance cost is acceptable|:|none|:|.clone()
+error|:|src/app.rs|:|23|:|23|:|13|:|24|:|struct `app::GlobalState` has no field named `all_windows`|:|[0m[1m[38;5;9merror[E0560][0m[0m[1m: struct `app::GlobalState` has no field named `all_windows`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:23:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            all_windows: vec![[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m             [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9m`app::GlobalState` does not have this field[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: available fields are: `workspaces`[0m
+
+|:|none
+error|:|src/app.rs|:|37|:|37|:|13|:|27|:|struct `app::GlobalState` has no field named `focused_window`|:|[0m[1m[38;5;9merror[E0560][0m[0m[1m: struct `app::GlobalState` has no field named `focused_window`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:37:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m37[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            focused_window: None,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m             [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9m`app::GlobalState` does not have this field[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: available fields are: `workspaces`[0m
+
+|:|none
+error|:|src/app.rs|:|13|:|13|:|10|:|15|:|the trait bound `components::workspace::WorkspaceData: std::clone::Clone` is not satisfied|:|[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `components::workspace::WorkspaceData: std::clone::Clone` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:16:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m          [0m[0m[1m[38;5;12m-----[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    workspaces: Vec<WorkspaceData>,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `std::clone::Clone` is not implemented for `components::workspace::WorkspaceData`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: required for `std::vec::Vec<components::workspace::WorkspaceData>` to implement `std::clone::Clone`[0m
+
+|:|none
+error|:|src/components/window.rs|:|4|:|4|:|10|:|15|:|the trait bound `leptos::prelude::AnyView: std::clone::Clone` is not satisfied|:|[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `leptos::prelude::AnyView: std::clone::Clone` is not satisfied[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/components/window.rs:9:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone)][0m
+[0m  [0m[0m[1m[38;5;12m|[0m[0m          [0m[0m[1m[38;5;12m-----[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub content: AnyView,[0m
+[0m  [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `std::clone::Clone` is not implemented for `leptos::prelude::AnyView`[0m
+
+|:|none
+error|:|src/app.rs|:|13|:|13|:|17|:|22|:|`components::workspace::WorkspaceData` doesn't implement `std::fmt::Debug`|:|[0m[1m[38;5;9merror[E0277][0m[0m[1m: `components::workspace::WorkspaceData` doesn't implement `std::fmt::Debug`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:16:5[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone, Debug, Store)][0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                 [0m[0m[1m[38;5;12m-----[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    workspaces: Vec<WorkspaceData>,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `std::fmt::Debug` is not implemented for `components::workspace::WorkspaceData`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: add `#[derive(Debug)]` to `components::workspace::WorkspaceData` or manually `impl std::fmt::Debug for components::workspace::WorkspaceData`[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `std::fmt::Debug` [0m[0m[1m[35mis[0m[0m implemented for `[0m[0m[1m[35mstd::vec::Vec<T, A>[0m[0m`[0m
+
+|:|none
+error|:|src/app.rs|:|23|:|23|:|13|:|24|:|struct `app::GlobalState` has no field named `all_windows`|:|[0m[1m[38;5;9merror[E0560][0m[0m[1m: struct `app::GlobalState` has no field named `all_windows`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:23:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m23[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            all_windows: vec![[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m             [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9m`app::GlobalState` does not have this field[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: available fields are: `workspaces`[0m
+
+|:|none
+error|:|src/app.rs|:|37|:|37|:|13|:|27|:|struct `app::GlobalState` has no field named `focused_window`|:|[0m[1m[38;5;9merror[E0560][0m[0m[1m: struct `app::GlobalState` has no field named `focused_window`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0msrc/app.rs:37:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m37[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            focused_window: None,[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m             [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9m`app::GlobalState` does not have this field[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: available fields are: `workspaces`[0m
+
+|:|none
+error|:|src/components/window.rs|:|4|:|4|:|10|:|15|:|the trait bound `leptos::prelude::AnyView: std::clone::Clone` is not satisfied|:|[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `leptos::prelude::AnyView: std::clone::Clone` is not satisfied[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0msrc/components/window.rs:9:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[derive(Clone)][0m
+[0m  [0m[0m[1m[38;5;12m|[0m[0m          [0m[0m[1m[38;5;12m-----[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub content: AnyView,[0m
+[0m  [0m[0m[1m[38;5;12m|[0m[0m     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `std::clone::Clone` is not implemented for `leptos::prelude::AnyView`[0m
+
+|:|none

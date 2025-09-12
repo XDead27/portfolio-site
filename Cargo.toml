@@ -9,6 +9,9 @@ gloo-net = { version = "0.6.0", features = ["http"] }
 console_error_panic_hook = { version = "0.1.7" }
 leptos_meta = "0.8.5"
 leptos_router = "0.8.5"
+reactive_stores = "0.2.5"
+uuid = { version = "1.17.0", features = ["v4", "js"] }
+nary_tree = "0.4.4"
 
 [profile.release]
 opt-level = "z"

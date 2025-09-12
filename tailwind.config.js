@@ -32,6 +32,17 @@ module.exports = {
         },
         beige: {
           DEFAULT: '#CEC288',
+          50:  '#FCFCF7',
+          100: '#FAF9F2',
+          200: '#F2F0DF',
+          300: '#EBE7CA',
+          400: '#DED7A9',
+          500: '#CEC288',
+          600: '#BAAB6E',
+          700: '#9C864C',
+          800: '#7D6432',
+          900: '#5C421C',
+          950: '#3B240B',
         },
       },
       fontFamily: {

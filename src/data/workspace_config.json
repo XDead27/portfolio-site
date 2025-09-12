@@ -3,8 +3,7 @@
         "name": "About",
         "windows": [
             {
-                "name": "Bio",
-                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "id": "bio",
                 "floating": true,
                 "default-position": {
                     "x": 100,
@@ -12,7 +11,7 @@
                 }
             },
             {
-                "name": "This site",
+                "id": "site",
                 "content": "This site is a demonstration of a workspace configuration file.",
                 "floating": true,
                 "default-position": {
