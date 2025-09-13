@@ -1,19 +1,17 @@
 use leptos::prelude::*;
-use uuid::Uuid;
 
-#[derive(Clone)]
-pub struct WindowData {
-    pub id: Uuid,
-    pub name: String,
-    pub focused: bool,
-    pub content: AnyView,
-}
+use crate::components::modules::WindowContent;
 
 #[component]
-pub fn Window(data: WindowData, on_close: fn()) -> impl IntoView {
-    let (is_closing, set_is_closing) = signal(false);
+pub fn Window(
+    content: WindowContent,
+    focused: bool,
+    on_is_focused: impl Fn(bool) + 'static + Copy,
+    on_close: fn(),
+) -> impl IntoView {
+    let (is_closing, _set_is_closing) = signal(false);
 
-    let name = data.name;
+    let name = content.title().to_string();
 
     view! {
         <div
@@ -24,18 +22,20 @@ pub fn Window(data: WindowData, on_close: fn()) -> impl IntoView {
                 } else {
                     base += " opacity-100 scale-100";
                 }
-                if data.focused {
+                if focused {
                     base += " border-beige-800";
                 } else {
                     base += " border-beige";
                 }
                 base
             }
+            on:mouseover=move |_| on_is_focused(true)
+            // on:mouseout=move |_| on_is_focused(false)
         >
             <div
                 class=move || {
                     let mut base = "w-full px-2 py-1 flex flex-row justify-between text-wm-bg transition-all duration-500 ease-in-out".to_string();
-                    if data.focused {
+                    if focused {
                         base += " bg-beige-800";
                     } else {
                         base += " bg-beige";
@@ -56,7 +56,7 @@ pub fn Window(data: WindowData, on_close: fn()) -> impl IntoView {
                 </div>
             </div>
             <div class="h-full bg-purple-900 mx-2 mb-2">
-                {data.content}
+                {content.render()}
             </div>
         </div>
     }
