@@ -1,7 +1,7 @@
 use std::sync::{Arc, RwLock};
 
-use leptos::prelude::*;
-use nary_tree::{NodeId, Tree, TreeBuilder};
+use leptos::{logging, prelude::*};
+use nary_tree::{NodeId, RemoveBehavior, Tree, TreeBuilder};
 
 use crate::components::Window;
 use crate::components::modules::WindowContent;
@@ -13,6 +13,15 @@ pub enum NodeDirection {
     Horizontal,
 }
 
+impl NodeDirection {
+    pub fn inverted(&self) -> NodeDirection {
+        match self {
+            NodeDirection::Vertical => NodeDirection::Horizontal,
+            NodeDirection::Horizontal => NodeDirection::Vertical,
+        }
+    }
+}
+
 #[derive(Debug, Clone)]
 pub struct WorkspaceNodeData {
     direction: NodeDirection,
@@ -22,6 +31,7 @@ pub struct WorkspaceNodeData {
 #[derive(Debug, Clone)]
 pub struct WorkspaceData {
     pub name: String,
+    pub focused_window: Option<NodeId>,
     pub windows: Arc<RwLock<Tree<WorkspaceNodeData>>>,
 }
 
@@ -35,11 +45,12 @@ impl WorkspaceData {
             .build();
         Self {
             name,
+            focused_window: None,
             windows: Arc::new(RwLock::new(tree)),
         }
     }
 
-    pub fn add_window(&mut self, to_node_id: NodeId, window_content: WindowContent) {
+    pub fn add_window(&mut self, window_content: WindowContent) {
         let mut new_node = WorkspaceNodeData {
             direction: NodeDirection::default(),
             window_content: Some(window_content),
@@ -54,42 +65,71 @@ impl WorkspaceData {
             .expect("Failed to acquire write lock on window tree");
 
         if let Some(focused_id) = self.focused_window {
-            let mut to_node = tree.get_mut(to_node_id).unwrap();
+            let mut to_node = tree.get_mut(focused_id).unwrap();
             let curr_window = to_node
                 .data()
                 .clone()
                 .window_content
                 .expect("Focused node has no window data!");
             to_node.data().window_content = None;
-            to_node.append(WorkspaceNodeData {
-                direction: NodeDirection::default(),
+            let curr_direction = to_node.data().direction;
+            let curr_new_node = to_node.append(WorkspaceNodeData {
+                direction: curr_direction.inverted(),
                 window_content: Some(curr_window),
             });
+            self.focused_window = Some(curr_new_node.node_id());
 
-            new_node.direction = match to_node.data().direction {
-                NodeDirection::Vertical => NodeDirection::Horizontal,
-                NodeDirection::Horizontal => NodeDirection::Vertical,
-            };
+            new_node.direction = curr_direction.inverted();
             to_node.append(new_node);
         } else {
             let root = tree.root_id().expect("Window tree root does not exist!");
             tree.get_mut(root).unwrap().append(new_node);
         };
     }
+
+    pub fn remove_window(&mut self, node_id: NodeId) {
+        let tree = &mut self
+            .windows
+            .write()
+            .expect("Failed to acquire write lock on window tree");
+
+        let mut only_child_data = None;
+        let node = tree
+            .get_mut(node_id)
+            .expect("Node to remove does not exist!");
+        if let Some(parent_node) = node.parent() {
+            tree.remove(node_id, RemoveBehavior::DropChildren);
+            // if parent has only one child left, promote that child
+            if parent_node.first_child().is_some() {
+                let only_child_id = parent_node.first_child().unwrap().node_id();
+                let only_child = tree.get(only_child_id).unwrap();
+                only_child_data = Some(only_child.data().clone());
+                tree.remove(only_child_id, RemoveBehavior::DropChildren);
+            }
+        }
+
+        if self.focused_window == Some(node_id) {
+            self.focused_window = None;
+        }
+    }
 }
 
-fn workspace_render_helper(
-    node_id: NodeId,
-    focused_id: RwSignal<Option<NodeId>>,
-    tree: &Tree<WorkspaceNodeData>,
-) -> AnyView {
-    let base_div_style = "w-full h-full p-4 flex";
+fn workspace_render_helper(node_id: NodeId, workspace_data: RwSignal<WorkspaceData>) -> AnyView {
+    let base_div_style = "w-full h-full flex";
+
+    let wd = workspace_data.get();
+    let tree = wd
+        .windows
+        .read()
+        .expect("Failed to acquire read lock on window tree");
+
     let node = tree.get(node_id).unwrap();
     let window_content = &node.data().window_content;
+    let focused_id = wd.focused_window;
 
     if let Some(wd) = window_content {
         let class = "w-full h-full p-4";
-        let focused = focused_id.get() == Some(node_id);
+        let focused = focused_id == Some(node_id);
         view! {
             <div class=class>
                 <Window
@@ -97,9 +137,9 @@ fn workspace_render_helper(
                     focused=focused
                     on_is_focused=move |b: bool| {
                         if b {
-                            focused_id.set(Some(node_id));
-                        } else if focused_id.get() == Some(node_id) {
-                            focused_id.set(None);
+                            workspace_data.update(|ws| ws.focused_window = Some(node_id));
+                        } else if focused_id == Some(node_id) {
+                            workspace_data.update(|ws| ws.focused_window = None);
                         }
                     }
                     on_close=||{}
@@ -109,14 +149,14 @@ fn workspace_render_helper(
         .into_any()
     } else {
         let flex_direction = match node.data().direction {
-            NodeDirection::Vertical => "flex-col space-y-6",
-            NodeDirection::Horizontal => "flex-row space-x-6",
+            NodeDirection::Vertical => "flex-col",
+            NodeDirection::Horizontal => "flex-row",
         };
-        let class = format!("{} {}", base_div_style, flex_direction);
+        let class = format!("{base_div_style} {flex_direction}");
 
         view! {
             <div class=class>
-                {node.children().map(move |child_id| workspace_render_helper(child_id.node_id(), focused_id, tree)).collect_view()}
+                {node.children().map(move |child_id| workspace_render_helper(child_id.node_id(), workspace_data)).collect_view()}
             </div>
         }.into_any()
     }
@@ -124,22 +164,17 @@ fn workspace_render_helper(
 
 #[component]
 pub fn Workspace(
-    workspace_data: impl Fn() -> WorkspaceData + Send + Sync + 'static,
+    workspace_data: impl Fn() -> RwSignal<WorkspaceData> + Send + Sync + 'static,
 ) -> impl IntoView {
-    let focused_signal = RwSignal::new(workspace_data().focused_window);
-
     view! {
         {move || workspace_render_helper(
-            workspace_data()
+            workspace_data().get()
                 .windows
                 .read()
                 .expect("Failed to acquire read lock on window tree")
                 .root_id()
                 .expect("Window tree root does not exist!"),
-            focused_signal,
-            &workspace_data()
-                .windows
-                .read()
-                .expect("Failed to acquire read lock on window tree"))}
+            workspace_data()
+        )}
     }
 }
