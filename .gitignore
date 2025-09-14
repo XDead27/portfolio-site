@@ -1,3 +1,5 @@
+.bacon-locations
+
 # === Rust build artifacts ===
 /target
 **/*.rs.bk

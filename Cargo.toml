@@ -12,6 +12,7 @@ leptos_router = "0.8.5"
 reactive_stores = "0.2.5"
 uuid = { version = "1.17.0", features = ["v4", "js"] }
 nary_tree = "0.4.4"
+once_cell = "1.21.3"
 
 [profile.release]
 opt-level = "z"
