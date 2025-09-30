@@ -1,6 +1,6 @@
 use std::sync::{Arc, RwLock};
 
-use leptos::{logging, prelude::*};
+use leptos::prelude::*;
 use nary_tree::{NodeId, RemoveBehavior, Tree, TreeBuilder};
 
 use crate::components::Window;
@@ -52,7 +52,7 @@ impl WorkspaceData {
 
     pub fn add_window(&mut self, window_content: WindowContent) {
         let mut new_node = WorkspaceNodeData {
-            direction: NodeDirection::default(),
+            direction: NodeDirection::Vertical,
             window_content: Some(window_content),
         };
 
@@ -64,8 +64,9 @@ impl WorkspaceData {
             .write()
             .expect("Failed to acquire write lock on window tree");
 
-        if let Some(focused_id) = self.focused_window {
-            let mut to_node = tree.get_mut(focused_id).unwrap();
+        if let Some(focused_id) = self.focused_window
+            && let Some(mut to_node) = tree.get_mut(focused_id)
+        {
             let curr_window = to_node
                 .data()
                 .clone()
@@ -88,29 +89,47 @@ impl WorkspaceData {
     }
 
     pub fn remove_window(&mut self, node_id: NodeId) {
-        let tree = &mut self
+        let (node_data, replace_parent) = {
+            let tree = self
+                .windows
+                .read()
+                .expect("Failed to acquire read lock on window tree");
+            let node = tree.get(node_id).expect("Node to remove does not exist!");
+            let only_child = node
+                .parent()
+                .expect("Node to remove has no parent!")
+                .children()
+                .count()
+                == 2;
+            let parent_is_root = node
+                .parent()
+                .expect("Node to remove has no parent!")
+                .node_id()
+                == tree.root_id().unwrap();
+            let prev_sibling_data = node.prev_sibling().map(|sibling| sibling.data().clone());
+            let next_sibling_data = node.next_sibling().map(|sibling| sibling.data().clone());
+            (
+                prev_sibling_data.or(next_sibling_data),
+                only_child && !parent_is_root,
+            )
+        };
+
+        let mut tree = self
             .windows
             .write()
             .expect("Failed to acquire write lock on window tree");
 
-        let mut only_child_data = None;
-        let node = tree
-            .get_mut(node_id)
-            .expect("Node to remove does not exist!");
-        if let Some(parent_node) = node.parent() {
-            tree.remove(node_id, RemoveBehavior::DropChildren);
-            // if parent has only one child left, promote that child
-            if parent_node.first_child().is_some() {
-                let only_child_id = parent_node.first_child().unwrap().node_id();
-                let only_child = tree.get(only_child_id).unwrap();
-                only_child_data = Some(only_child.data().clone());
-                tree.remove(only_child_id, RemoveBehavior::DropChildren);
-            }
-        }
+        if replace_parent {
+            let mut node = tree
+                .get_mut(node_id)
+                .expect("Node to remove does not exist!");
+            let mut parent = node.parent().expect("Node to remove has no parent!");
 
-        if self.focused_window == Some(node_id) {
-            self.focused_window = None;
+            let node_data = node_data.expect("Node to remove has no sibling!");
+            parent.data().window_content = node_data.window_content;
+            parent.data().direction = node_data.direction;
         }
+        tree.remove(node_id, RemoveBehavior::DropChildren);
     }
 }
 
@@ -142,7 +161,9 @@ fn workspace_render_helper(node_id: NodeId, workspace_data: RwSignal<WorkspaceDa
                             workspace_data.update(|ws| ws.focused_window = None);
                         }
                     }
-                    on_close=||{}
+                    on_close=move || {
+                        workspace_data.update(|ws| ws.remove_window(node_id));
+                    }
                 />
             </div>
         }

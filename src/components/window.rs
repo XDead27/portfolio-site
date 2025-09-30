@@ -7,7 +7,7 @@ pub fn Window(
     content: WindowContent,
     focused: bool,
     on_is_focused: impl Fn(bool) + 'static + Copy,
-    on_close: fn(),
+    on_close: impl Fn() + 'static + Copy,
 ) -> impl IntoView {
     let (is_closing, _set_is_closing) = signal(false);
 
@@ -16,7 +16,7 @@ pub fn Window(
     view! {
         <div
             class=move || {
-                let mut base = "w-full h-full rounded-sm border-3 flex flex-col transition-all duration-500 ease-in-out transform".to_string();
+                let mut base = "w-full h-full rounded-sm border-3 flex flex-col transition-all duration-500 ease-in-out transform group".to_string();
                 if is_closing.get() {
                     base += " opacity-0 scale-90";
                 } else {
@@ -50,7 +50,7 @@ pub fn Window(
                     <img
                         src="/icons/cross.svg"
                         alt="Close"
-                        class="w-4 h-4 cursor-pointer hover:opacity-80 transition-opacity duration-300"
+                        class="w-4 h-4 cursor-pointer opacity-0 group-hover:opacity-100 hover:opacity-80 transition-opacity duration-300"
                         on:click=move |_| on_close()
                     />
                 </div>
