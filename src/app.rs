@@ -32,15 +32,17 @@ pub fn App() -> impl IntoView {
 
 #[component]
 fn Home() -> impl IntoView {
-    // let workspaces = [
-    //     RwSignal::new(WorkspaceData::new("About".to_string())),
-    //     RwSignal::new(WorkspaceData::new("Projects".to_string())),
-    //     RwSignal::new(WorkspaceData::new("Contact".to_string())),
-    //     RwSignal::new(WorkspaceData::new("Freestyle".to_string())),
-    // ];
-    let workspaces = DEFAULT_WORKSPACES
-        .clone()
-        .map(|(name, _)| RwSignal::new(WorkspaceData::new(name.to_string())));
+    let workspaces = DEFAULT_WORKSPACES.clone().map(|wde| {
+        if let Some(windows) = wde.windows {
+            RwSignal::new(WorkspaceData {
+                name: wde.name.to_string(),
+                focused_window: None,
+                windows: windows.clone(),
+            })
+        } else {
+            RwSignal::new(WorkspaceData::new(wde.name.to_string()))
+        }
+    });
 
     let current_workspace_idx = expect_context::<Store<GlobalState>>().current_workspace();
     let current_workspace = move || workspaces[current_workspace_idx.get()];

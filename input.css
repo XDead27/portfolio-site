@@ -5,4 +5,7 @@
   body {
     @apply bg-wm-bg text-white font-mono;
   }
+  a {
+    @apply text-green hover:text-green-300/50
+  }
 }

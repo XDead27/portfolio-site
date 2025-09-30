@@ -9,7 +9,7 @@ use crate::data::defaults::{DEFAULT_WORKSPACES, NUM_WORKSPACES};
 static WINDOWS_BY_WORKSPACE: Lazy<[Vec<WindowContent>; NUM_WORKSPACES]> = Lazy::new(|| {
     DEFAULT_WORKSPACES
         .iter()
-        .map(|(_, windows)| windows.clone())
+        .map(|wde| wde.contents.clone())
         .collect::<Vec<Vec<WindowContent>>>()
         .try_into()
         .unwrap_or_else(|v: Vec<Vec<WindowContent>>| {

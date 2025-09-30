@@ -22,10 +22,19 @@ impl NodeDirection {
     }
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Default, Clone)]
 pub struct WorkspaceNodeData {
-    direction: NodeDirection,
-    window_content: Option<WindowContent>,
+    pub direction: NodeDirection,
+    pub window_content: Option<WindowContent>,
+}
+
+impl WorkspaceNodeData {
+    pub fn new(direction: NodeDirection) -> Self {
+        Self {
+            direction,
+            window_content: None,
+        }
+    }
 }
 
 #[derive(Debug, Clone)]

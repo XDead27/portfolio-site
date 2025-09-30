@@ -3,13 +3,13 @@ use leptos::prelude::*;
 #[component]
 pub fn EducationWindow() -> impl IntoView {
     view! {
-      <section class="min-h-screen py-8 px-6">
+      <section class="py-8 px-6">
         <div class="max-w-4xl mx-auto">
           <h1 class="text-2xl font-bold mb-8 text-center text-gray-100">
             Education
           </h1>
 
-          <div class="flex items-start shadow-md rounded-sm p-6 mb-8 border-l-8 border-green space-x-4">
+          <div class="flex items-start shadow-md rounded-sm p-6 mb-8 border-l-8 border-green space-x-4 cursor-pointer hover:bg-beige-200/20 transition-colors duration-300">
             <div class="flex-shrink-0">
               <img
                 src="/images/tudelft-logo.png"
@@ -30,7 +30,7 @@ pub fn EducationWindow() -> impl IntoView {
             </div>
           </div>
 
-          <div class="flex items-start shadow-md rounded-sm p-6 mb-8 border-l-8 border-green space-x-4">
+          <div class="flex items-start shadow-md rounded-sm p-6 mb-8 border-l-8 border-green space-x-4 cursor-pointer hover:bg-beige-200/20 transition-colors duration-300">
             <div class="flex-shrink-0">
               <img
                 src="/images/tohoku-logo.png"
@@ -54,7 +54,7 @@ pub fn EducationWindow() -> impl IntoView {
             </div>
           </div>
 
-          <div class="flex items-start shadow-md rounded-sm p-6 mb-8 border-l-8 border-green space-x-4">
+          <div class="flex items-start shadow-md rounded-sm p-6 mb-8 border-l-8 border-green space-x-4 cursor-pointer hover:bg-beige-200/20 transition-colors duration-300">
             <div class="flex-shrink-0">
               <img
                 src="/images/tudelft-logo.png"
