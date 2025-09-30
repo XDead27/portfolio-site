@@ -3,6 +3,7 @@ use leptos::{logging, mount};
 
 mod app;
 mod components;
+mod data;
 
 pub fn main() {
     console_error_panic_hook::set_once();

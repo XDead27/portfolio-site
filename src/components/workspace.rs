@@ -4,7 +4,7 @@ use leptos::prelude::*;
 use nary_tree::{NodeId, RemoveBehavior, Tree, TreeBuilder};
 
 use crate::components::Window;
-use crate::components::modules::WindowContent;
+use crate::data::WindowContent;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 pub enum NodeDirection {
@@ -134,7 +134,7 @@ impl WorkspaceData {
 }
 
 fn workspace_render_helper(node_id: NodeId, workspace_data: RwSignal<WorkspaceData>) -> AnyView {
-    let base_div_style = "w-full h-full flex";
+    let base_div_style = "w-full h-full flex overflow-hidden";
 
     let wd = workspace_data.get();
     let tree = wd
@@ -147,7 +147,7 @@ fn workspace_render_helper(node_id: NodeId, workspace_data: RwSignal<WorkspaceDa
     let focused_id = wd.focused_window;
 
     if let Some(wd) = window_content {
-        let class = "w-full h-full p-4";
+        let class = "w-full h-full p-4 overflow-hidden";
         let focused = focused_id == Some(node_id);
         view! {
             <div class=class>
@@ -188,14 +188,27 @@ pub fn Workspace(
     workspace_data: impl Fn() -> RwSignal<WorkspaceData> + Send + Sync + 'static,
 ) -> impl IntoView {
     view! {
-        {move || workspace_render_helper(
-            workspace_data().get()
-                .windows
-                .read()
-                .expect("Failed to acquire read lock on window tree")
-                .root_id()
-                .expect("Window tree root does not exist!"),
-            workspace_data()
-        )}
+        {move || {
+            let (root_id, is_empty) = {
+                let data = workspace_data().get();
+                let windows = data.windows.read().unwrap();
+                let root_id = windows.root_id().expect("Window tree root does not exist!");
+                let root = windows.get(root_id).unwrap();
+                (root_id, root.children().next().is_none())
+            };
+
+            if is_empty {
+                view! {
+                    <div class="flex flex-col items-center justify-center h-full w-full text-gray-500">
+                        <p class="text-lg italic">"No windows open. Use the navbar to add windows."</p>
+                    </div>
+                }.into_any()
+            } else {
+                workspace_render_helper(
+                    root_id,
+                    workspace_data()
+                ).into_any()
+            }
+        }}
     }
 }

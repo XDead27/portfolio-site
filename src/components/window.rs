@@ -1,6 +1,6 @@
 use leptos::prelude::*;
 
-use crate::components::modules::WindowContent;
+use crate::data::WindowContent;
 
 #[component]
 pub fn Window(
@@ -55,7 +55,7 @@ pub fn Window(
                     />
                 </div>
             </div>
-            <div class="h-full bg-purple-900 mx-2 mb-2">
+            <div class="h-full bg-purple-900 mx-2 mb-2 overflow-auto">
                 {content.render()}
             </div>
         </div>

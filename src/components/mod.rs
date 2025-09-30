@@ -1,4 +1,3 @@
-pub mod modules;
 pub mod navbar;
 pub mod window;
 pub mod workspace;

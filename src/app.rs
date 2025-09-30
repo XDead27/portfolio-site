@@ -1,7 +1,8 @@
 use crate::components::Navbar;
 use crate::components::Workspace;
-use crate::components::modules::WindowContent;
 use crate::components::workspace::WorkspaceData;
+use crate::data::WindowContent;
+use crate::data::defaults::{DEFAULT_WORKSPACES, NUM_WORKSPACES};
 use leptos::prelude::*;
 use leptos_meta::*;
 use leptos_router::{
@@ -9,8 +10,6 @@ use leptos_router::{
     components::{Route, Router, Routes},
 };
 use reactive_stores::Store;
-
-pub static NUM_WORKSPACES: usize = 4;
 
 #[derive(Clone, Debug, Store, Default)]
 pub struct GlobalState {
@@ -33,12 +32,15 @@ pub fn App() -> impl IntoView {
 
 #[component]
 fn Home() -> impl IntoView {
-    let workspaces = [
-        RwSignal::new(WorkspaceData::new("About".to_string())),
-        RwSignal::new(WorkspaceData::new("Projects".to_string())),
-        RwSignal::new(WorkspaceData::new("Contact".to_string())),
-        RwSignal::new(WorkspaceData::new("Freestyle".to_string())),
-    ];
+    // let workspaces = [
+    //     RwSignal::new(WorkspaceData::new("About".to_string())),
+    //     RwSignal::new(WorkspaceData::new("Projects".to_string())),
+    //     RwSignal::new(WorkspaceData::new("Contact".to_string())),
+    //     RwSignal::new(WorkspaceData::new("Freestyle".to_string())),
+    // ];
+    let workspaces = DEFAULT_WORKSPACES
+        .clone()
+        .map(|(name, _)| RwSignal::new(WorkspaceData::new(name.to_string())));
 
     let current_workspace_idx = expect_context::<Store<GlobalState>>().current_workspace();
     let current_workspace = move || workspaces[current_workspace_idx.get()];
@@ -58,8 +60,7 @@ fn Home() -> impl IntoView {
     view! {
         <Title text="Home | Daniel Peter - Portofolio"/>
         <main>
-            <div class="flex flex-col h-screen">
-                <div class="p-4 text-wm-cyan">"Welcome to my portfolio!"</div>
+            <div class="flex flex-col h-screen overflow-hidden">
                 <Workspace workspace_data=current_workspace />
                 <Navbar workspace_names=workspace_names on_add_window_workspace=on_add_window_workspace/>
             </div>
