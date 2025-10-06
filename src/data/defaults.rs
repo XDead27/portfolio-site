@@ -60,7 +60,11 @@ pub static DEFAULT_WORKSPACES: Lazy<[WorkspaceDefaultsEntry; NUM_WORKSPACES]> = 
         },
         WorkspaceDefaultsEntry {
             name: "Projects",
-            contents: vec![],
+            contents: vec![
+                WindowContent::SnakeProject,
+                WindowContent::ImaginaryProject,
+                WindowContent::HexChessProject,
+            ],
             windows: Some(Arc::new(RwLock::new(
                 TreeBuilder::new()
                     .with_root(WorkspaceNodeData {
