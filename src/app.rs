@@ -24,7 +24,7 @@ pub fn App() -> impl IntoView {
     view! {
         <Router>
             <Routes fallback=|| "Page not found.">
-                <Route path=StaticSegment("") view=Home/>
+                <Route path=StaticSegment("") view=Home />
             </Routes>
         </Router>
     }
@@ -60,11 +60,14 @@ fn Home() -> impl IntoView {
         .collect::<Vec<String>>();
 
     view! {
-        <Title text="Home | Daniel Peter - Portofolio"/>
+        <Title text="Home | Daniel Peter - Portofolio" />
         <main>
             <div class="flex flex-col h-screen overflow-hidden">
                 <Workspace workspace_data=current_workspace />
-                <Navbar workspace_names=workspace_names on_add_window_workspace=on_add_window_workspace/>
+                <Navbar
+                    workspace_names=workspace_names
+                    on_add_window_workspace=on_add_window_workspace
+                />
             </div>
         </main>
     }

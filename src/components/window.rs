@@ -16,7 +16,8 @@ pub fn Window(
     view! {
         <div
             class=move || {
-                let mut base = "w-full h-full rounded-sm border-3 flex flex-col transition-all duration-500 ease-in-out transform group".to_string();
+                let mut base = "w-full h-full rounded-sm border-3 flex flex-col transition-all duration-500 ease-in-out transform group"
+                    .to_string();
                 if is_closing.get() {
                     base += " opacity-0 scale-90";
                 } else {
@@ -30,22 +31,19 @@ pub fn Window(
                 base
             }
             on:mouseover=move |_| on_is_focused(true)
-            // on:mouseout=move |_| on_is_focused(false)
         >
-            <div
-                class=move || {
-                    let mut base = "w-full px-2 py-1 flex flex-row justify-between text-wm-bg transition-all duration-500 ease-in-out".to_string();
-                    if focused {
-                        base += " bg-beige-800";
-                    } else {
-                        base += " bg-beige";
-                    }
-                    base
+            // on:mouseout=move |_| on_is_focused(false)
+            <div class=move || {
+                let mut base = "w-full px-2 py-1 flex flex-row justify-between text-wm-bg transition-all duration-500 ease-in-out"
+                    .to_string();
+                if focused {
+                    base += " bg-beige-800";
+                } else {
+                    base += " bg-beige";
                 }
-            >
-                <span class="text-sm font-semibold">
-                    {name}
-                </span>
+                base
+            }>
+                <span class="text-sm font-semibold">{name}</span>
                 <div class="flex flex-row">
                     <img
                         src="/icons/cross.svg"
@@ -55,9 +53,7 @@ pub fn Window(
                     />
                 </div>
             </div>
-            <div class="h-full bg-purple-900 mx-2 mb-2 overflow-auto">
-                {content.render()}
-            </div>
+            <div class="h-full bg-purple-900 mx-2 mb-2 overflow-auto">{content.render()}</div>
         </div>
     }
 }

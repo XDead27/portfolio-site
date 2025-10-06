@@ -43,33 +43,19 @@ impl WindowContent {
 
     pub fn render(&self) -> AnyView {
         match self {
-            WindowContent::Bio => view! {
-                <BioWindow />
-            }
+            WindowContent::Bio => view! { <BioWindow /> }
             .into_any(),
-            WindowContent::ThisSite => view! {
-                <ThisSiteWindow />
-            }
+            WindowContent::ThisSite => view! { <ThisSiteWindow /> }
             .into_any(),
-            WindowContent::Skills => view! {
-                <SkillsWindow />
-            }
+            WindowContent::Skills => view! { <SkillsWindow /> }
             .into_any(),
-            WindowContent::Education => view! {
-                <EducationWindow />
-            }
+            WindowContent::Education => view! { <EducationWindow /> }
             .into_any(),
-            WindowContent::SnakeProject => view! {
-                <crate::data::snake_project::SnakeProject />
-            }
+            WindowContent::SnakeProject => view! { <crate::data::snake_project::SnakeProject /> }
             .into_any(),
-            WindowContent::ImaginaryProject => view! {
-                <crate::data::imaginary_project::ImaginaryProject />
-            }
+            WindowContent::ImaginaryProject => view! { <crate::data::imaginary_project::ImaginaryProject /> }
             .into_any(),
-            WindowContent::HexChessProject => view! {
-                <crate::data::hexchess_project::HexChessProject />
-            }
+            WindowContent::HexChessProject => view! { <crate::data::hexchess_project::HexChessProject /> }
             .into_any(),
         }
     }

@@ -186,7 +186,13 @@ fn workspace_render_helper(node_id: NodeId, workspace_data: RwSignal<WorkspaceDa
 
         view! {
             <div class=class>
-                {node.children().map(move |child_id| workspace_render_helper(child_id.node_id(), workspace_data)).collect_view()}
+                {node
+                    .children()
+                    .map(move |child_id| workspace_render_helper(
+                        child_id.node_id(),
+                        workspace_data,
+                    ))
+                    .collect_view()}
             </div>
         }.into_any()
     }
@@ -205,18 +211,18 @@ pub fn Workspace(
                 let root = windows.get(root_id).unwrap();
                 (root_id, root.children().next().is_none())
             };
-
             if is_empty {
+
                 view! {
                     <div class="flex flex-col items-center justify-center h-full w-full text-gray-500">
-                        <p class="text-lg italic">"No windows open. Use the navbar to add windows."</p>
+                        <p class="text-lg italic">
+                            "No windows open. Use the navbar to add windows."
+                        </p>
                     </div>
-                }.into_any()
+                }
+                    .into_any()
             } else {
-                workspace_render_helper(
-                    root_id,
-                    workspace_data()
-                ).into_any()
+                workspace_render_helper(root_id, workspace_data()).into_any()
             }
         }}
     }
