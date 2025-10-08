@@ -34,7 +34,7 @@ pub fn Window(
         >
             // on:mouseout=move |_| on_is_focused(false)
             <div class=move || {
-                let mut base = "w-full px-2 py-1 flex flex-row justify-between text-wm-bg transition-all duration-500 ease-in-out"
+                let mut base = "w-full px-2 py-1 flex flex-row justify-between text-wm-bg transition-all duration-500 ease-in-out cursor-pointer"
                     .to_string();
                 if focused {
                     base += " bg-beige-800";

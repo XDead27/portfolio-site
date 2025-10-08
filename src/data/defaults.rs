@@ -64,15 +64,43 @@ pub static DEFAULT_WORKSPACES: Lazy<[WorkspaceDefaultsEntry; NUM_WORKSPACES]> = 
                 WindowContent::SnakeProject,
                 WindowContent::ImaginaryProject,
                 WindowContent::HexChessProject,
+                WindowContent::TildeProject,
             ],
-            windows: Some(Arc::new(RwLock::new(
-                TreeBuilder::new()
-                    .with_root(WorkspaceNodeData {
+            windows: Some(Arc::new(RwLock::new({
+                let mut tree = TreeBuilder::new()
+                    .with_root(WorkspaceNodeData::default())
+                    .build();
+                let mut root = tree.root_mut().unwrap();
+
+                {
+                    let mut lhs = root.append(WorkspaceNodeData::new(NodeDirection::Vertical));
+
+                    lhs.append(WorkspaceNodeData {
                         direction: NodeDirection::default(),
-                        window_content: None,
-                    })
-                    .build(),
-            ))),
+                        window_content: Some(WindowContent::SnakeProject),
+                    });
+                    lhs.append(WorkspaceNodeData {
+                        direction: NodeDirection::default(),
+                        window_content: Some(WindowContent::ImaginaryProject),
+                    });
+                }
+
+                {
+                    let mut rhs = root.append(WorkspaceNodeData::new(NodeDirection::Vertical));
+
+                    rhs.append(WorkspaceNodeData {
+                        direction: NodeDirection::default(),
+                        window_content: Some(WindowContent::HexChessProject),
+                    });
+
+                    rhs.append(WorkspaceNodeData {
+                        direction: NodeDirection::default(),
+                        window_content: Some(WindowContent::TildeProject),
+                    });
+                }
+
+                tree
+            }))),
         },
         WorkspaceDefaultsEntry {
             name: "Research",

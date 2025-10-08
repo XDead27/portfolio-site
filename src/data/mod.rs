@@ -16,6 +16,7 @@ pub mod imaginary_project;
 pub mod skills;
 pub mod snake_project;
 pub mod this_site;
+pub mod tilde_project;
 
 #[derive(Clone, Debug, PartialEq)]
 pub enum WindowContent {
@@ -26,6 +27,7 @@ pub enum WindowContent {
     SnakeProject,
     ImaginaryProject,
     HexChessProject,
+    TildeProject,
 }
 
 impl WindowContent {
@@ -38,25 +40,28 @@ impl WindowContent {
             WindowContent::SnakeProject => "Snake Game",
             WindowContent::ImaginaryProject => "GraphlexJS",
             WindowContent::HexChessProject => "Hexagonal Chess",
+            WindowContent::TildeProject => "Tilde",
         }
     }
 
     pub fn render(&self) -> AnyView {
         match self {
-            WindowContent::Bio => view! { <BioWindow /> }
-            .into_any(),
-            WindowContent::ThisSite => view! { <ThisSiteWindow /> }
-            .into_any(),
-            WindowContent::Skills => view! { <SkillsWindow /> }
-            .into_any(),
-            WindowContent::Education => view! { <EducationWindow /> }
-            .into_any(),
-            WindowContent::SnakeProject => view! { <crate::data::snake_project::SnakeProject /> }
-            .into_any(),
-            WindowContent::ImaginaryProject => view! { <crate::data::imaginary_project::ImaginaryProject /> }
-            .into_any(),
-            WindowContent::HexChessProject => view! { <crate::data::hexchess_project::HexChessProject /> }
-            .into_any(),
+            WindowContent::Bio => view! { <BioWindow /> }.into_any(),
+            WindowContent::ThisSite => view! { <ThisSiteWindow /> }.into_any(),
+            WindowContent::Skills => view! { <SkillsWindow /> }.into_any(),
+            WindowContent::Education => view! { <EducationWindow /> }.into_any(),
+            WindowContent::SnakeProject => {
+                view! { <crate::data::snake_project::SnakeProject /> }.into_any()
+            }
+            WindowContent::ImaginaryProject => {
+                view! { <crate::data::imaginary_project::ImaginaryProject /> }.into_any()
+            }
+            WindowContent::HexChessProject => {
+                view! { <crate::data::hexchess_project::HexChessProject /> }.into_any()
+            }
+            WindowContent::TildeProject => {
+                view! { <crate::data::tilde_project::TildeProject /> }.into_any()
+            }
         }
     }
 }
