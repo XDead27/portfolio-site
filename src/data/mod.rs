@@ -8,15 +8,19 @@ use crate::data::education::EducationWindow;
 use crate::data::skills::SkillsWindow;
 use crate::data::this_site::ThisSiteWindow;
 
+pub mod bachelor_thesis;
 pub mod bio;
 pub mod defaults;
+pub mod drone_project;
 pub mod education;
 pub mod hexchess_project;
 pub mod imaginary_project;
+pub mod master_thesis;
 pub mod skills;
 pub mod snake_project;
 pub mod this_site;
 pub mod tilde_project;
+pub mod tohoku_paper;
 
 #[derive(Clone, Debug, PartialEq)]
 pub enum WindowContent {
@@ -28,6 +32,10 @@ pub enum WindowContent {
     ImaginaryProject,
     HexChessProject,
     TildeProject,
+    DroneProject,
+    BachelorThesis,
+    TohokuPaper,
+    MasterThesis,
 }
 
 impl WindowContent {
@@ -41,6 +49,10 @@ impl WindowContent {
             WindowContent::ImaginaryProject => "GraphlexJS",
             WindowContent::HexChessProject => "Hexagonal Chess",
             WindowContent::TildeProject => "Tilde",
+            WindowContent::DroneProject => "Drone",
+            WindowContent::BachelorThesis => "Bachelor Thesis",
+            WindowContent::TohokuPaper => "Tohoku Paper",
+            WindowContent::MasterThesis => "Master Thesis",
         }
     }
 
@@ -61,6 +73,18 @@ impl WindowContent {
             }
             WindowContent::TildeProject => {
                 view! { <crate::data::tilde_project::TildeProject /> }.into_any()
+            }
+            WindowContent::DroneProject => {
+                view! { <crate::data::drone_project::DroneProject /> }.into_any()
+            }
+            WindowContent::BachelorThesis => {
+                view! { <crate::data::bachelor_thesis::BachelorThesis /> }.into_any()
+            }
+            WindowContent::TohokuPaper => {
+                view! { <crate::data::tohoku_paper::TohokuPaper /> }.into_any()
+            }
+            WindowContent::MasterThesis => {
+                view! { <crate::data::master_thesis::MasterThesis /> }.into_any()
             }
         }
     }

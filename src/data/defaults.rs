@@ -65,6 +65,7 @@ pub static DEFAULT_WORKSPACES: Lazy<[WorkspaceDefaultsEntry; NUM_WORKSPACES]> = 
                 WindowContent::ImaginaryProject,
                 WindowContent::HexChessProject,
                 WindowContent::TildeProject,
+                WindowContent::DroneProject,
             ],
             windows: Some(Arc::new(RwLock::new({
                 let mut tree = TreeBuilder::new()
@@ -82,6 +83,10 @@ pub static DEFAULT_WORKSPACES: Lazy<[WorkspaceDefaultsEntry; NUM_WORKSPACES]> = 
                     lhs.append(WorkspaceNodeData {
                         direction: NodeDirection::default(),
                         window_content: Some(WindowContent::ImaginaryProject),
+                    });
+                    lhs.append(WorkspaceNodeData {
+                        direction: NodeDirection::default(),
+                        window_content: Some(WindowContent::DroneProject),
                     });
                 }
 
@@ -104,15 +109,33 @@ pub static DEFAULT_WORKSPACES: Lazy<[WorkspaceDefaultsEntry; NUM_WORKSPACES]> = 
         },
         WorkspaceDefaultsEntry {
             name: "Research",
-            contents: vec![],
-            windows: Some(Arc::new(RwLock::new(
-                TreeBuilder::new()
+            contents: vec![
+                WindowContent::BachelorThesis,
+                WindowContent::TohokuPaper,
+                WindowContent::MasterThesis,
+            ],
+            windows: Some(Arc::new(RwLock::new({
+                let mut tree = TreeBuilder::new()
                     .with_root(WorkspaceNodeData {
                         direction: NodeDirection::default(),
                         window_content: None,
                     })
-                    .build(),
-            ))),
+                    .build();
+                let mut root = tree.root_mut().unwrap();
+                root.append(WorkspaceNodeData {
+                    direction: NodeDirection::default(),
+                    window_content: Some(WindowContent::BachelorThesis),
+                });
+                root.append(WorkspaceNodeData {
+                    direction: NodeDirection::default(),
+                    window_content: Some(WindowContent::TohokuPaper),
+                });
+                root.append(WorkspaceNodeData {
+                    direction: NodeDirection::default(),
+                    window_content: Some(WindowContent::MasterThesis),
+                });
+                tree
+            }))),
         },
         WorkspaceDefaultsEntry {
             name: "Freestyle",
