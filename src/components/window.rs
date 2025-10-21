@@ -1,6 +1,10 @@
 use leptos::prelude::*;
+use reactive_stores::Store;
 
-use crate::data::WindowContent;
+use crate::{
+    app::{GlobalState, GlobalStateStoreFields},
+    data::WindowContent,
+};
 
 #[component]
 pub fn Window(
@@ -10,8 +14,10 @@ pub fn Window(
     on_close: impl Fn() + 'static + Copy,
 ) -> impl IntoView {
     let (is_closing, _set_is_closing) = signal(false);
+    let blinking_windows = expect_context::<Store<GlobalState>>().blinking_windows();
 
     let name = content.title().to_string();
+    let content2 = content.clone();
 
     view! {
         <div
@@ -23,7 +29,9 @@ pub fn Window(
                 } else {
                     base += " opacity-100 scale-100";
                 }
-                if focused {
+                if blinking_windows.get().contains(&content) {
+                    base += " border-red animate-pulse";
+                } else if focused {
                     base += " border-beige-800";
                 } else {
                     base += " border-beige";
@@ -36,7 +44,9 @@ pub fn Window(
             <div class=move || {
                 let mut base = "w-full px-2 py-1 flex flex-row justify-between text-wm-bg transition-all duration-500 ease-in-out cursor-pointer"
                     .to_string();
-                if focused {
+                if blinking_windows.get().contains(&content2) {
+                    base += " bg-red";
+                } else if focused {
                     base += " bg-beige-800";
                 } else {
                     base += " bg-beige";

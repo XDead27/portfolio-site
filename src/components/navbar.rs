@@ -24,6 +24,7 @@ static WINDOWS_BY_WORKSPACE: Lazy<[Vec<WindowContent>; NUM_WORKSPACES]> = Lazy::
 #[component]
 pub fn Navbar(
     workspace_names: Vec<String>,
+    on_new_window_workspace: impl Fn(usize, WindowContent) + 'static + Copy,
     on_add_window_workspace: impl Fn(usize, WindowContent) + 'static + Copy,
 ) -> impl IntoView {
     let workspace_base_css_class = "inline-block align-middle rounded-sm hover:bg-green-200 transition-colors duration-300 px-2 cursor-pointer";
@@ -63,6 +64,10 @@ pub fn Navbar(
                                                                     src="/icons/crosshair.svg"
                                                                     alt="Add"
                                                                     class="w-3 h-3 cursor-pointer opacity-0 group-hover/inner:opacity-100 transition-opacity duration-300"
+                                                                    on:click=move |_| on_new_window_workspace(
+                                                                        current_workspace.get(),
+                                                                        w.clone(),
+                                                                    )
                                                                 />
 
                                                                 <span

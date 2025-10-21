@@ -49,6 +49,10 @@ module.exports = {
           900: '#5C421C',
           950: '#3B240B',
         },
+        red: {
+          DEFAULT: '#992d04',
+          500: '#992d04',
+        },
       },
       fontFamily: {
         mono: ['Fira Code', 'monospace'],

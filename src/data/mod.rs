@@ -22,7 +22,7 @@ pub mod this_site;
 pub mod tilde_project;
 pub mod tohoku_paper;
 
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, Eq, Hash)]
 pub enum WindowContent {
     Bio,
     ThisSite,
