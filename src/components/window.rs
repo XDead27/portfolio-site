@@ -1,28 +1,54 @@
-use leptos::prelude::*;
+use leptos::{logging, prelude::*};
 use reactive_stores::Store;
 
 use crate::{
     app::{GlobalState, GlobalStateStoreFields},
-    data::WindowContent,
+    data::WindowContentType,
 };
+
+#[derive(Debug, Clone)]
+pub struct WindowData {
+    pub content: WindowContentType,
+    pub blur_overlay: bool,
+}
+
+impl WindowData {
+    pub fn new(content: WindowContentType, blur_overlay: bool) -> Self {
+        Self {
+            content,
+            blur_overlay,
+        }
+    }
+
+    pub fn from_content(content: WindowContentType) -> Self {
+        Self {
+            content,
+            blur_overlay: false,
+        }
+    }
+}
 
 #[component]
 pub fn Window(
-    content: WindowContent,
-    focused: bool,
-    on_is_focused: impl Fn(bool) + 'static + Copy,
+    content: WindowContentType,
+    focused: Signal<bool>,
+    on_is_focused: impl Fn() + 'static + Copy,
     on_close: impl Fn() + 'static + Copy,
+    #[prop(optional, default = false)] blur_overlay: bool,
 ) -> impl IntoView {
     let (is_closing, _set_is_closing) = signal(false);
     let blinking_windows = expect_context::<Store<GlobalState>>().blinking_windows();
 
     let name = content.title().to_string();
+    let name2 = name.clone();
     let content2 = content.clone();
+
+    logging::log!("Rendering window: {}", name);
 
     view! {
         <div
             class=move || {
-                let mut base = "w-full h-full rounded-sm border-3 flex flex-col transition-all duration-500 ease-in-out transform group"
+                let mut base = "relative w-full h-full rounded-sm border-3 flex flex-col transition-all duration-500 ease-in-out transform group"
                     .to_string();
                 if is_closing.get() {
                     base += " opacity-0 scale-90";
@@ -31,22 +57,27 @@ pub fn Window(
                 }
                 if blinking_windows.get().contains(&content) {
                     base += " border-red animate-pulse";
-                } else if focused {
+                } else if focused.get() {
                     base += " border-beige-800";
                 } else {
                     base += " border-beige";
                 }
                 base
             }
-            on:mouseover=move |_| on_is_focused(true)
+            on:mouseenter=move |_| on_is_focused()
         >
-            // on:mouseout=move |_| on_is_focused(false)
+            <Show when=move || blur_overlay>
+                <div class="absolute inset-0 flex items-center justify-center group-hover:opacity-0 z-10 group-hover:-z-10">
+                    <span class="text-lg">{(*name2).to_string()}</span>
+                </div>
+            </Show>
+
             <div class=move || {
                 let mut base = "w-full px-2 py-1 flex flex-row justify-between text-wm-bg transition-all duration-500 ease-in-out cursor-pointer"
                     .to_string();
                 if blinking_windows.get().contains(&content2) {
                     base += " bg-red";
-                } else if focused {
+                } else if focused.get() {
                     base += " bg-beige-800";
                 } else {
                     base += " bg-beige";
@@ -63,7 +94,12 @@ pub fn Window(
                     />
                 </div>
             </div>
-            <div class="h-full bg-purple-900 mx-2 mb-2 overflow-auto">{content.render()}</div>
+            <div
+                class="h-full bg-purple-900 mx-2 mb-2 overflow-auto transition-all duration-300"
+                class=(["blur-lg", "group-hover:blur-none"], move || blur_overlay)
+            >
+                {content.render()}
+            </div>
         </div>
     }
 }

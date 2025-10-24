@@ -3,36 +3,36 @@ use std::sync::{Arc, RwLock};
 use leptos::prelude::*;
 use nary_tree::{NodeId, RemoveBehavior, Tree, TreeBuilder};
 
+use crate::components::window::WindowData;
 use crate::components::Window;
-use crate::data::WindowContent;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
-pub enum NodeDirection {
+pub enum SplitDirection {
     Vertical,
     #[default]
     Horizontal,
 }
 
-impl NodeDirection {
-    pub fn inverted(&self) -> NodeDirection {
+impl SplitDirection {
+    pub fn inverted(&self) -> SplitDirection {
         match self {
-            NodeDirection::Vertical => NodeDirection::Horizontal,
-            NodeDirection::Horizontal => NodeDirection::Vertical,
+            SplitDirection::Vertical => SplitDirection::Horizontal,
+            SplitDirection::Horizontal => SplitDirection::Vertical,
         }
     }
 }
 
 #[derive(Debug, Default, Clone)]
 pub struct WorkspaceNodeData {
-    pub direction: NodeDirection,
-    pub window_content: Option<WindowContent>,
+    pub direction: SplitDirection,
+    pub window_data: Option<WindowData>,
 }
 
 impl WorkspaceNodeData {
-    pub fn new(direction: NodeDirection) -> Self {
+    pub fn new(direction: SplitDirection) -> Self {
         Self {
             direction,
-            window_content: None,
+            window_data: None,
         }
     }
 }
@@ -48,8 +48,8 @@ impl WorkspaceData {
     pub fn new(name: String) -> Self {
         let tree = TreeBuilder::new()
             .with_root(WorkspaceNodeData {
-                direction: NodeDirection::default(),
-                window_content: None,
+                direction: SplitDirection::default(),
+                window_data: None,
             })
             .build();
         Self {
@@ -59,10 +59,10 @@ impl WorkspaceData {
         }
     }
 
-    pub fn add_window(&mut self, window_content: WindowContent) {
+    pub fn add_window(&mut self, split_direction: SplitDirection, window_data: WindowData) {
         let mut new_node = WorkspaceNodeData {
-            direction: NodeDirection::Vertical,
-            window_content: Some(window_content),
+            direction: split_direction,
+            window_data: Some(window_data),
         };
 
         // select position to insert: if there is a focused window, split that node
@@ -79,18 +79,24 @@ impl WorkspaceData {
             let curr_window = to_node
                 .data()
                 .clone()
-                .window_content
+                .window_data
                 .expect("Focused node has no window data!");
-            to_node.data().window_content = None;
-            let curr_direction = to_node.data().direction;
             let curr_new_node = to_node.append(WorkspaceNodeData {
-                direction: curr_direction.inverted(),
-                window_content: Some(curr_window),
+                direction: split_direction,
+                window_data: Some(curr_window),
             });
             self.focused_window = Some(curr_new_node.node_id());
 
-            new_node.direction = curr_direction.inverted();
-            to_node.append(new_node);
+            new_node.direction = SplitDirection::default();
+            if split_direction == to_node.data().direction {
+                let mut to_node_parent = to_node.parent().unwrap(); // safe since focused node cannot
+                // be root
+                to_node_parent.append(new_node);
+            } else {
+                to_node.append(new_node);
+                to_node.data().window_data = None;
+                to_node.data().direction = split_direction;
+            }
         } else {
             let root = tree.root_id().expect("Window tree root does not exist!");
             tree.get_mut(root).unwrap().append(new_node);
@@ -135,7 +141,7 @@ impl WorkspaceData {
             let mut parent = node.parent().expect("Node to remove has no parent!");
 
             let node_data = node_data.expect("Node to remove has no sibling!");
-            parent.data().window_content = node_data.window_content;
+            parent.data().window_data = node_data.window_data;
             parent.data().direction = node_data.direction;
         }
         tree.remove(node_id, RemoveBehavior::DropChildren);
@@ -152,23 +158,19 @@ fn workspace_render_helper(node_id: NodeId, workspace_data: RwSignal<WorkspaceDa
         .expect("Failed to acquire read lock on window tree");
 
     let node = tree.get(node_id).unwrap();
-    let window_content = &node.data().window_content;
+    let window_content = &node.data().window_data;
     let focused_id = wd.focused_window;
 
     if let Some(wd) = window_content {
         let class = "w-full h-full p-4 overflow-hidden";
-        let focused = focused_id == Some(node_id);
         view! {
             <div class=class>
                 <Window
-                    content=wd.clone()
-                    focused=focused
-                    on_is_focused=move |b: bool| {
-                        if b {
-                            workspace_data.update(|ws| ws.focused_window = Some(node_id));
-                        } else if focused_id == Some(node_id) {
-                            workspace_data.update(|ws| ws.focused_window = None);
-                        }
+                    content=wd.clone().content
+                    blur_overlay=wd.clone().blur_overlay
+                    focused=Signal::derive(move || focused_id == Some(node_id))
+                    on_is_focused=move || {
+                        workspace_data.update(|ws| ws.focused_window = Some(node_id));
                     }
                     on_close=move || {
                         workspace_data.update(|ws| ws.remove_window(node_id));
@@ -179,8 +181,8 @@ fn workspace_render_helper(node_id: NodeId, workspace_data: RwSignal<WorkspaceDa
         .into_any()
     } else {
         let flex_direction = match node.data().direction {
-            NodeDirection::Vertical => "flex-col",
-            NodeDirection::Horizontal => "flex-row",
+            SplitDirection::Vertical => "flex-col",
+            SplitDirection::Horizontal => "flex-row",
         };
         let class = format!("{base_div_style} {flex_direction}");
 
@@ -194,7 +196,8 @@ fn workspace_render_helper(node_id: NodeId, workspace_data: RwSignal<WorkspaceDa
                     ))
                     .collect_view()}
             </div>
-        }.into_any()
+        }
+        .into_any()
     }
 }
 

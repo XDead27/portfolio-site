@@ -4,7 +4,7 @@ pub fn tree_any<F, N>(node: &NodeRef<N>, f: &F) -> bool
 where
     F: Fn(&N) -> bool,
 {
-    if f(&node.data()) {
+    if f(node.data()) {
         return true;
     }
     for child in node.children() {

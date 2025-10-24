@@ -3,16 +3,17 @@ use once_cell::sync::Lazy;
 use reactive_stores::Store;
 
 use crate::app::{GlobalState, GlobalStateStoreFields};
-use crate::data::WindowContent;
+use crate::data::WindowContentType;
 use crate::data::defaults::{DEFAULT_WORKSPACES, NUM_WORKSPACES};
+use crate::components::Button;
 
-static WINDOWS_BY_WORKSPACE: Lazy<[Vec<WindowContent>; NUM_WORKSPACES]> = Lazy::new(|| {
+static WINDOWS_BY_WORKSPACE: Lazy<[Vec<WindowContentType>; NUM_WORKSPACES]> = Lazy::new(|| {
     DEFAULT_WORKSPACES
         .iter()
         .map(|wde| wde.contents.clone())
-        .collect::<Vec<Vec<WindowContent>>>()
+        .collect::<Vec<Vec<WindowContentType>>>()
         .try_into()
-        .unwrap_or_else(|v: Vec<Vec<WindowContent>>| {
+        .unwrap_or_else(|v: Vec<Vec<WindowContentType>>| {
             panic!(
                 "Expected a Vec of length {} but got {}",
                 NUM_WORKSPACES,
@@ -24,30 +25,28 @@ static WINDOWS_BY_WORKSPACE: Lazy<[Vec<WindowContent>; NUM_WORKSPACES]> = Lazy::
 #[component]
 pub fn Navbar(
     workspace_names: Vec<String>,
-    on_new_window_workspace: impl Fn(usize, WindowContent) + 'static + Copy,
-    on_add_window_workspace: impl Fn(usize, WindowContent) + 'static + Copy,
+    on_new_window_workspace: impl Fn(usize, WindowContentType) + 'static + Copy,
+    on_add_window_workspace: impl Fn(usize, WindowContentType) + 'static + Copy,
 ) -> impl IntoView {
-    let workspace_base_css_class = "inline-block align-middle rounded-sm hover:bg-green-200 transition-colors duration-300 px-2 cursor-pointer";
     let current_workspace = expect_context::<Store<GlobalState>>().current_workspace();
 
     view! {
-        <div class="flex flex-row space-x-2 justify-between px-4 py-2 mx-auto mb-12 rounded-sm bg-green text-white">
+        <div class="flex flex-row space-x-1 justify-between px-1 rounded-sm bg-green text-white">
             {workspace_names
-                .iter()
+                .into_iter()
                 .enumerate()
                 .map({
                     move |(idx, wn)| {
                         view! {
                             <div class="relative group">
-                                <span
-                                    class=workspace_base_css_class
-                                    class=("bg-green-100", move || current_workspace.get() == idx)
-                                    on:click=move |_| {
+                                <Button
+                                    selected=Signal::derive(move || current_workspace.get() == idx)
+                                    on_click=move || {
                                         current_workspace.set(idx);
                                     }
                                 >
-                                    {wn.clone()}
-                                </span>
+                                    {wn}
+                                </Button>
                                 {if WINDOWS_BY_WORKSPACE[idx].is_empty() {
                                     ().into_any()
                                 } else {

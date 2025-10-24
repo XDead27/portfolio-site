@@ -4,14 +4,14 @@ use nary_tree::{Tree, TreeBuilder};
 use once_cell::sync::Lazy;
 
 use crate::{
-    components::workspace::{NodeDirection, WorkspaceNodeData},
-    data::WindowContent,
+    components::{window::WindowData, workspace::{SplitDirection, WorkspaceNodeData}},
+    data::WindowContentType,
 };
 
 #[derive(Debug, Clone)]
 pub struct WorkspaceDefaultsEntry {
     pub name: &'static str,
-    pub contents: Vec<WindowContent>,
+    pub contents: Vec<WindowContentType>,
     pub windows: Option<Arc<RwLock<Tree<WorkspaceNodeData>>>>,
 }
 
@@ -21,10 +21,10 @@ pub static DEFAULT_WORKSPACES: Lazy<[WorkspaceDefaultsEntry; NUM_WORKSPACES]> = 
         WorkspaceDefaultsEntry {
             name: "About",
             contents: vec![
-                WindowContent::Bio,
-                WindowContent::Education,
-                WindowContent::ThisSite,
-                WindowContent::Skills,
+                WindowContentType::Bio,
+                WindowContentType::Education,
+                WindowContentType::ThisSite,
+                WindowContentType::Skills,
             ],
             windows: Some(Arc::new(RwLock::new({
                 let mut tree = TreeBuilder::new()
@@ -33,26 +33,26 @@ pub static DEFAULT_WORKSPACES: Lazy<[WorkspaceDefaultsEntry; NUM_WORKSPACES]> = 
                 let mut root = tree.root_mut().unwrap();
 
                 {
-                    let mut lhs = root.append(WorkspaceNodeData::new(NodeDirection::Vertical));
+                    let mut lhs = root.append(WorkspaceNodeData::new(SplitDirection::Vertical));
 
                     lhs.append(WorkspaceNodeData {
-                        direction: NodeDirection::default(),
-                        window_content: Some(WindowContent::ThisSite),
+                        direction: SplitDirection::default(),
+                        window_data: Some(WindowData::from_content(WindowContentType::ThisSite)),
                     });
                     lhs.append(WorkspaceNodeData {
-                        direction: NodeDirection::default(),
-                        window_content: Some(WindowContent::Bio),
+                        direction: SplitDirection::default(),
+                        window_data: Some(WindowData::from_content(WindowContentType::Bio)),
                     });
                 }
 
                 root.append(WorkspaceNodeData {
-                    direction: NodeDirection::Vertical,
-                    window_content: Some(WindowContent::Education),
+                    direction: SplitDirection::Vertical,
+                    window_data: Some(WindowData::from_content(WindowContentType::Education)),
                 });
 
                 root.append(WorkspaceNodeData {
-                    direction: NodeDirection::Vertical,
-                    window_content: Some(WindowContent::Skills),
+                    direction: SplitDirection::Vertical,
+                    window_data: Some(WindowData::from_content(WindowContentType::Skills)),
                 });
 
                 tree
@@ -61,11 +61,11 @@ pub static DEFAULT_WORKSPACES: Lazy<[WorkspaceDefaultsEntry; NUM_WORKSPACES]> = 
         WorkspaceDefaultsEntry {
             name: "Projects",
             contents: vec![
-                WindowContent::SnakeProject,
-                WindowContent::ImaginaryProject,
-                WindowContent::HexChessProject,
-                WindowContent::TildeProject,
-                WindowContent::DroneProject,
+                WindowContentType::SnakeProject,
+                WindowContentType::ImaginaryProject,
+                WindowContentType::HexChessProject,
+                WindowContentType::TildeProject,
+                WindowContentType::DroneProject,
             ],
             windows: Some(Arc::new(RwLock::new({
                 let mut tree = TreeBuilder::new()
@@ -74,33 +74,33 @@ pub static DEFAULT_WORKSPACES: Lazy<[WorkspaceDefaultsEntry; NUM_WORKSPACES]> = 
                 let mut root = tree.root_mut().unwrap();
 
                 {
-                    let mut lhs = root.append(WorkspaceNodeData::new(NodeDirection::Vertical));
+                    let mut lhs = root.append(WorkspaceNodeData::new(SplitDirection::Vertical));
 
                     lhs.append(WorkspaceNodeData {
-                        direction: NodeDirection::default(),
-                        window_content: Some(WindowContent::SnakeProject),
+                        direction: SplitDirection::default(),
+                        window_data: Some(WindowData::new(WindowContentType::SnakeProject, true)),
                     });
                     lhs.append(WorkspaceNodeData {
-                        direction: NodeDirection::default(),
-                        window_content: Some(WindowContent::ImaginaryProject),
+                        direction: SplitDirection::default(),
+                        window_data: Some(WindowData::new(WindowContentType::ImaginaryProject, true)),
                     });
                     lhs.append(WorkspaceNodeData {
-                        direction: NodeDirection::default(),
-                        window_content: Some(WindowContent::DroneProject),
+                        direction: SplitDirection::default(),
+                        window_data: Some(WindowData::new(WindowContentType::DroneProject, true)),
                     });
                 }
 
                 {
-                    let mut rhs = root.append(WorkspaceNodeData::new(NodeDirection::Vertical));
+                    let mut rhs = root.append(WorkspaceNodeData::new(SplitDirection::Vertical));
 
                     rhs.append(WorkspaceNodeData {
-                        direction: NodeDirection::default(),
-                        window_content: Some(WindowContent::HexChessProject),
+                        direction: SplitDirection::default(),
+                        window_data: Some(WindowData::new(WindowContentType::HexChessProject, true)),
                     });
 
                     rhs.append(WorkspaceNodeData {
-                        direction: NodeDirection::default(),
-                        window_content: Some(WindowContent::TildeProject),
+                        direction: SplitDirection::default(),
+                        window_data: Some(WindowData::new(WindowContentType::TildeProject, true)),
                     });
                 }
 
@@ -110,29 +110,29 @@ pub static DEFAULT_WORKSPACES: Lazy<[WorkspaceDefaultsEntry; NUM_WORKSPACES]> = 
         WorkspaceDefaultsEntry {
             name: "Research",
             contents: vec![
-                WindowContent::BachelorThesis,
-                WindowContent::TohokuPaper,
-                WindowContent::MasterThesis,
+                WindowContentType::BachelorThesis,
+                WindowContentType::TohokuPaper,
+                WindowContentType::MasterThesis,
             ],
             windows: Some(Arc::new(RwLock::new({
                 let mut tree = TreeBuilder::new()
                     .with_root(WorkspaceNodeData {
-                        direction: NodeDirection::default(),
-                        window_content: None,
+                        direction: SplitDirection::default(),
+                        window_data: None,
                     })
                     .build();
                 let mut root = tree.root_mut().unwrap();
                 root.append(WorkspaceNodeData {
-                    direction: NodeDirection::default(),
-                    window_content: Some(WindowContent::BachelorThesis),
+                    direction: SplitDirection::default(),
+                    window_data: Some(WindowData::from_content(WindowContentType::BachelorThesis)),
                 });
                 root.append(WorkspaceNodeData {
-                    direction: NodeDirection::default(),
-                    window_content: Some(WindowContent::TohokuPaper),
+                    direction: SplitDirection::default(),
+                    window_data: Some(WindowData::from_content(WindowContentType::TohokuPaper)),
                 });
                 root.append(WorkspaceNodeData {
-                    direction: NodeDirection::default(),
-                    window_content: Some(WindowContent::MasterThesis),
+                    direction: SplitDirection::default(),
+                    window_data: Some(WindowData::from_content(WindowContentType::MasterThesis)),
                 });
                 tree
             }))),
