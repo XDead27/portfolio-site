@@ -1,13 +1,14 @@
 use std::collections::HashSet;
 use std::time::Duration;
 
-use crate::components::window::WindowData;
-use crate::components::workspace::WorkspaceNodeData;
+use crate::components::Button;
 use crate::components::Navbar;
+use crate::components::Tooltip;
 use crate::components::Workspace;
+use crate::components::window::WindowData;
 use crate::components::workspace::SplitDirection;
 use crate::components::workspace::WorkspaceData;
-use crate::components::Button;
+use crate::components::workspace::WorkspaceNodeData;
 use crate::data::WindowContentType;
 use crate::data::defaults::{DEFAULT_WORKSPACES, NUM_WORKSPACES};
 use crate::utils::tree::tree_any;
@@ -63,10 +64,15 @@ fn Home() -> impl IntoView {
     let on_new_window_workspace = move |workspace_idx: usize, window_content: WindowContentType| {
         if workspace_idx < NUM_WORKSPACES {
             let ws = workspaces[workspace_idx];
-            ws.update(|ws| ws.add_window(current_direction.get(), WindowData {
-                content: window_content.clone(),
-                blur_overlay: false,
-            }));
+            ws.update(|ws| {
+                ws.add_window(
+                    current_direction.get(),
+                    WindowData {
+                        content: window_content.clone(),
+                        blur_overlay: false,
+                    },
+                )
+            });
         }
     };
 
@@ -77,7 +83,9 @@ fn Home() -> impl IntoView {
                 let ws = ws.get();
                 let tree = ws.windows.read().expect("Failed to read workspace tree");
                 tree_any(&tree.root().unwrap(), &|w: &WorkspaceNodeData| {
-                    w.window_data.clone().is_some_and(|wd| wd.content == window_content.clone())
+                    w.window_data
+                        .clone()
+                        .is_some_and(|wd| wd.content == window_content.clone())
                 })
             };
 
@@ -101,10 +109,15 @@ fn Home() -> impl IntoView {
                     }
                 });
             } else {
-                ws.update(|ws| ws.add_window(current_direction.get(), WindowData {
-                    content: window_content.clone(),
-                    blur_overlay: false,
-                }));
+                ws.update(|ws| {
+                    ws.add_window(
+                        current_direction.get(),
+                        WindowData {
+                            content: window_content.clone(),
+                            blur_overlay: false,
+                        },
+                    )
+                });
             }
         }
     };
@@ -113,7 +126,6 @@ fn Home() -> impl IntoView {
         .iter()
         .map(|ws| ws.get_untracked().name.clone())
         .collect::<Vec<String>>();
-
 
     view! {
         <Title text="Home | Daniel Peter - Portofolio" />
@@ -126,24 +138,26 @@ fn Home() -> impl IntoView {
                         on_new_window_workspace=on_new_window_workspace
                         on_add_window_workspace=on_add_window_workspace
                     />
-                    <Button 
-                        on_click=move || {
-                            let new_direction = current_direction.get().inverted();
-                            current_direction.set(new_direction);
-                        }
-                    >
-                        <img
-                            src=move || {
-                                if current_direction.get() == SplitDirection::Vertical {
-                                    "/icons/arrow-down.svg"
-                                } else {
-                                    "/icons/arrow-right.svg"
-                                }
+                    <Tooltip text="Change split direction">
+                        <Button
+                            on_click=move || {
+                                let new_direction = current_direction.get().inverted();
+                                current_direction.set(new_direction);
                             }
-                            alt="Change split direction"
-                            class="w-6 h-6 invert-[80%]"
-                        />
-                    </Button>
+                        >
+                            <img
+                                src=move || {
+                                    if current_direction.get() == SplitDirection::Vertical {
+                                        "/icons/arrow-down.svg"
+                                    } else {
+                                        "/icons/arrow-right.svg"
+                                    }
+                                }
+                                alt="Change split direction"
+                                class="w-6 h-6 invert-[80%]"
+                            />
+                        </Button>
+                    </Tooltip>
                 </div>
             </div>
         </main>
