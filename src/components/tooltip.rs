@@ -23,13 +23,10 @@ pub fn Tooltip(
 
     view! {
         <div class=outer_class>
-            <div class=inner_class>
-                {children()}
-            </div>
+            <div class=inner_class>{children()}</div>
             <div class=tooltip_class>
                 <div style="position: absolute; left: 50%; top: 100%; transform: translateX(-50%);">
-                    <div class="w-0 h-0 border-l-6 border-l-transparent border-r-6 border-r-transparent border-t-6 border-t-beige mt-[-1px]">
-                    </div>
+                    <div class="w-0 h-0 border-l-6 border-l-transparent border-r-6 border-r-transparent border-t-6 border-t-beige mt-[-1px]"></div>
                 </div>
                 {text}
             </div>

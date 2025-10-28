@@ -1,4 +1,4 @@
-use leptos::{logging, prelude::*};
+use leptos::prelude::*;
 use reactive_stores::Store;
 
 use crate::{
@@ -42,8 +42,6 @@ pub fn Window(
     let name = content.title().to_string();
     let name2 = name.clone();
     let content2 = content.clone();
-
-    logging::log!("Rendering window: {}", name);
 
     view! {
         <div

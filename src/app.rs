@@ -57,7 +57,6 @@ fn Home() -> impl IntoView {
     });
 
     let current_workspace_idx = expect_context::<Store<GlobalState>>().current_workspace();
-    let current_workspace = move || workspaces[current_workspace_idx.get()];
     let blinking_windows = expect_context::<Store<GlobalState>>().blinking_windows();
     let current_direction = expect_context::<Store<GlobalState>>().current_direction();
 
@@ -127,11 +126,69 @@ fn Home() -> impl IntoView {
         .map(|ws| ws.get_untracked().name.clone())
         .collect::<Vec<String>>();
 
+    // Sliding transition state
+    let (transitioning, set_transitioning) = signal(false);
+    let (prev_workspace_idx, set_prev_workspace_idx) =
+        signal(current_workspace_idx.get_untracked());
+    let animation_duration_ms: u64 = 250; // ms
+
+    // Listen for workspace changes
+    Effect::new(move |_| {
+        let idx = current_workspace_idx.get();
+        if idx != prev_workspace_idx.get() {
+            set_transitioning.set(true);
+            set_timeout(
+                move || {
+                    set_prev_workspace_idx.set(idx);
+                    set_transitioning.set(false);
+                },
+                Duration::from_millis(animation_duration_ms),
+            );
+        }
+    });
+
+    // Determine which workspace to show
+    let shown_workspace = move || {
+        if transitioning.get() {
+            workspaces[prev_workspace_idx.get()]
+        } else {
+            workspaces[current_workspace_idx.get()]
+        }
+    };
+
+    // Animation direction
+    let slide_direction = move || {
+        let prev = prev_workspace_idx.get();
+        let curr = current_workspace_idx.get();
+        if prev < curr {
+            "-translate-x-full"
+        } else {
+            "translate-x-full"
+        }
+    };
+
+    // Tailwind sliding classes
+    let slide_classes = move || {
+        if transitioning.get() {
+            slide_direction()
+        } else {
+            ""
+        }
+    };
+
     view! {
         <Title text="Home | Daniel Peter - Portofolio" />
         <main>
             <div class="flex flex-col h-screen overflow-hidden">
-                <Workspace workspace_data=current_workspace />
+                <div class=move || {
+                    format!(
+                        "w-full h-full relative overflow-hidden transform transition-transform duration-{} ease-in-out {}",
+                        animation_duration_ms.saturating_div(2),
+                        slide_classes(),
+                    )
+                }>
+                    <Workspace workspace_data=shown_workspace />
+                </div>
                 <div class="flex flex-row justify-center mb-8 space-x-4">
                     <Navbar
                         workspace_names=workspace_names
@@ -139,12 +196,10 @@ fn Home() -> impl IntoView {
                         on_add_window_workspace=on_add_window_workspace
                     />
                     <Tooltip text="Change split direction">
-                        <Button
-                            on_click=move || {
-                                let new_direction = current_direction.get().inverted();
-                                current_direction.set(new_direction);
-                            }
-                        >
+                        <Button on_click=move || {
+                            let new_direction = current_direction.get().inverted();
+                            current_direction.set(new_direction);
+                        }>
                             <img
                                 src=move || {
                                     if current_direction.get() == SplitDirection::Vertical {
