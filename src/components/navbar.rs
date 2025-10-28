@@ -3,9 +3,10 @@ use once_cell::sync::Lazy;
 use reactive_stores::Store;
 
 use crate::app::{GlobalState, GlobalStateStoreFields};
+use crate::components::Button;
+use crate::components::Tooltip;
 use crate::data::WindowContentType;
 use crate::data::defaults::{DEFAULT_WORKSPACES, NUM_WORKSPACES};
-use crate::components::Button;
 
 static WINDOWS_BY_WORKSPACE: Lazy<[Vec<WindowContentType>; NUM_WORKSPACES]> = Lazy::new(|| {
     DEFAULT_WORKSPACES
@@ -25,7 +26,7 @@ static WINDOWS_BY_WORKSPACE: Lazy<[Vec<WindowContentType>; NUM_WORKSPACES]> = La
 #[component]
 pub fn Navbar(
     workspace_names: Vec<String>,
-    on_new_window_workspace: impl Fn(usize, WindowContentType) + 'static + Copy,
+    on_new_window_workspace: impl Fn(usize, WindowContentType) + 'static + Copy + Send,
     on_add_window_workspace: impl Fn(usize, WindowContentType) + 'static + Copy,
 ) -> impl IntoView {
     let current_workspace = expect_context::<Store<GlobalState>>().current_workspace();
@@ -59,15 +60,20 @@ pub fn Navbar(
                                                         let w_name = w.title();
                                                         view! {
                                                             <div class="flex flex-row space-x-2 group/inner items-center">
-                                                                <img
-                                                                    src="/icons/crosshair.svg"
-                                                                    alt="Add"
-                                                                    class="w-3 h-3 cursor-pointer opacity-0 group-hover/inner:opacity-100 transition-opacity duration-300"
-                                                                    on:click=move |_| on_new_window_workspace(
-                                                                        current_workspace.get(),
-                                                                        w.clone(),
-                                                                    )
-                                                                />
+                                                                <Tooltip text="Open as a new window" delay=300>
+                                                                    <Button
+                                                                        on_click=move || on_new_window_workspace(
+                                                                            current_workspace.get(),
+                                                                            w.clone(),
+                                                                        )
+                                                                    >
+                                                                        <img
+                                                                            src="/icons/crosshair.svg"
+                                                                            alt="Add"
+                                                                            class="w-3 h-3 cursor-pointer opacity-0 group-hover/inner:opacity-100 transition-opacity duration-300 invert-[80%]"
+                                                                        />
+                                                                    </Button>
+                                                                </Tooltip>
 
                                                                 <span
                                                                     class="cursor-pointer group-hover/inner:underline"

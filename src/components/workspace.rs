@@ -3,8 +3,8 @@ use std::sync::{Arc, RwLock};
 use leptos::prelude::*;
 use nary_tree::{NodeId, RemoveBehavior, Tree, TreeBuilder};
 
-use crate::components::window::WindowData;
 use crate::components::Window;
+use crate::components::window::WindowData;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 pub enum SplitDirection {
@@ -60,7 +60,7 @@ impl WorkspaceData {
     }
 
     pub fn add_window(&mut self, split_direction: SplitDirection, window_data: WindowData) {
-        let mut new_node = WorkspaceNodeData {
+        let new_node = WorkspaceNodeData {
             direction: split_direction,
             window_data: Some(window_data),
         };
@@ -76,23 +76,22 @@ impl WorkspaceData {
         if let Some(focused_id) = self.focused_window
             && let Some(mut to_node) = tree.get_mut(focused_id)
         {
-            let curr_window = to_node
-                .data()
-                .clone()
-                .window_data
-                .expect("Focused node has no window data!");
-            let curr_new_node = to_node.append(WorkspaceNodeData {
-                direction: split_direction,
-                window_data: Some(curr_window),
-            });
-            self.focused_window = Some(curr_new_node.node_id());
-
-            new_node.direction = SplitDirection::default();
             if split_direction == to_node.data().direction {
                 let mut to_node_parent = to_node.parent().unwrap(); // safe since focused node cannot
                 // be root
                 to_node_parent.append(new_node);
             } else {
+                let curr_window = to_node
+                    .data()
+                    .clone()
+                    .window_data
+                    .expect("Focused node has no window data!");
+                let curr_new_node = to_node.append(WorkspaceNodeData {
+                    direction: split_direction,
+                    window_data: Some(curr_window),
+                });
+                self.focused_window = Some(curr_new_node.node_id());
+
                 to_node.append(new_node);
                 to_node.data().window_data = None;
                 to_node.data().direction = split_direction;

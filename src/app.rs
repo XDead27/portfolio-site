@@ -12,6 +12,7 @@ use crate::components::workspace::WorkspaceNodeData;
 use crate::data::WindowContentType;
 use crate::data::defaults::{DEFAULT_WORKSPACES, NUM_WORKSPACES};
 use crate::utils::tree::tree_any;
+use leptos::logging;
 use leptos::prelude::*;
 use leptos::reactive::spawn_local;
 use leptos_meta::*;
@@ -195,7 +196,10 @@ fn Home() -> impl IntoView {
                         on_new_window_workspace=on_new_window_workspace
                         on_add_window_workspace=on_add_window_workspace
                     />
-                    <Tooltip text="Change split direction">
+                    <Tooltip
+                        text="Change split direction"
+                        delay=200
+                    >
                         <Button on_click=move || {
                             let new_direction = current_direction.get().inverted();
                             current_direction.set(new_direction);
